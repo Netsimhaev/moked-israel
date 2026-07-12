@@ -1,0 +1,13 @@
+[      55ms] [ERROR] Failed to load resource: net::ERR_FAILED @ chrome-extension://invalid/:0
+[    5485ms] [WARNING] An iframe which has both allow-scripts and allow-same-origin for its sandbox attribute can escape its sandboxing. @ https://drive.google.com/auth_warmup:0
+[    5704ms] [ERROR] Failed to load resource: net::ERR_FAILED @ chrome-extension://invalid/:0
+[    5741ms] [ERROR] Failed to load resource: net::ERR_FAILED @ chrome-extension://invalid/:0
+[    5756ms] [ERROR] Failed to load resource: net::ERR_FAILED @ chrome-extension://invalid/:0
+[    5766ms] [ERROR] Failed to load resource: net::ERR_FAILED @ chrome-extension://invalid/:0
+[   17842ms] [WARNING] An iframe which has both allow-scripts and allow-same-origin for its sandbox attribute can escape its sandboxing. @ https://drive.google.com/drivesharing/clientmodel?id=1nHsov7qU63h-unIljtF29ZrzYnV8yVdV&foreignService=explorer&authuser=0&origin=https%3A%2F%2Fdrive.google.com:0
+[   18244ms] [WARNING] The key "target-densitydpi" is not supported. @ https://docs.google.com/spreadsheets/u/0/preview?id=1Wrv-6u2UwSZn7t1Kz3hepU1KRxgfK5DXZHC28Ho2xXI&auditContext=prefetch:0
+[   18997ms] [WARNING] The key "target-densitydpi" is not supported. @ https://docs.google.com/spreadsheets/u/0/d/1Wrv-6u2UwSZn7t1Kz3hepU1KRxgfK5DXZHC28Ho2xXI/preview/sheet?gid=0:0
+[  150464ms] [WARNING] An iframe which has both allow-scripts and allow-same-origin for its sandbox attribute can escape its sandboxing. @ https://drive.google.com/drivesharing/clientmodel?id=1Wrv-6u2UwSZn7t1Kz3hepU1KRxgfK5DXZHC28Ho2xXI&foreignService=explorer&authuser=0&origin=https%3A%2F%2Fdrive.google.com:0
+[  160018ms] [WARNING] An iframe which has both allow-scripts and allow-same-origin for its sandbox attribute can escape its sandboxing. @ https://drive.google.com/drivesharing/clientmodel?id=1nHsov7qU63h-unIljtF29ZrzYnV8yVdV&foreignService=explorer&authuser=0&origin=https%3A%2F%2Fdrive.google.com:0
+[  161078ms] [WARNING] The key "target-densitydpi" is not supported. @ https://docs.google.com/spreadsheets/u/0/preview?id=1Wrv-6u2UwSZn7t1Kz3hepU1KRxgfK5DXZHC28Ho2xXI&auditContext=prefetch:0
+[  161668ms] [WARNING] The key "target-densitydpi" is not supported. @ https://docs.google.com/spreadsheets/u/0/d/1Wrv-6u2UwSZn7t1Kz3hepU1KRxgfK5DXZHC28Ho2xXI/preview/sheet?gid=0:0

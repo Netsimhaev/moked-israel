@@ -1,0 +1,272 @@
+- generic [active] [ref=f4e1]:
+  - banner [ref=f4e2]:
+    - generic [ref=f4e3]:
+      - link "המוקד" [ref=f4e4] [cursor=pointer]:
+        - /url: /
+      - link "התקשרו עכשיו" [ref=f4e6] [cursor=pointer]:
+        - /url: tel:+97230000000
+  - main [ref=f4e7]:
+    - generic [ref=f4e9]:
+      - paragraph [ref=f4e10]:
+        - link "בית" [ref=f4e11] [cursor=pointer]:
+          - /url: /
+        - text: ">"
+        - link "מנעולים חכמים" [ref=f4e12] [cursor=pointer]:
+          - /url: /locks
+        - text: "> ALFA"
+      - generic [ref=f4e13]:
+        - generic [ref=f4e14]:
+          - img "ALFA — רוזגולד" [ref=f4e16]
+          - generic [ref=f4e17]:
+            - button "הגדלת תמונה מהתקנה אמיתית" [ref=f4e18]:
+              - img "התקנת ALFA בבית לקוח" [ref=f4e19]
+              - generic: ⤢
+            - button "הגדלת תמונה מהתקנה אמיתית" [ref=f4e20]:
+              - img "התקנת ALFA בבית לקוח" [ref=f4e21]
+              - generic: ⤢
+            - button "הגדלת תמונה מהתקנה אמיתית" [ref=f4e22]:
+              - img "התקנת ALFA בבית לקוח" [ref=f4e23]
+              - generic: ⤢
+            - button "הגדלת תמונה מהתקנה אמיתית" [ref=f4e24]:
+              - img "התקנת ALFA בבית לקוח" [ref=f4e25]
+              - generic: ⤢
+          - paragraph [ref=f4e26]: תמונות מהתקנות אמיתיות בבתי לקוחות — לחצו להגדלה
+          - generic [ref=f4e27]:
+            - heading "מי מייצר, מי מתקין" [level=3] [ref=f4e28]
+            - paragraph [ref=f4e29]: ALFA מיוצר על ידי Techom — יצרן מנעולים חכמים ישראלי, פיתוח ישראלי. המוקד היא חברה חיצונית שבחרה את הדגם לאחר בדיקה מעמיקה של השוק, מתקינה אותו בעצמה בבית שלכם, ונותנת עליו אחריות ושירות ישירים — כתובת אחת לכל שאלה, גם אחרי הרכישה.
+        - generic [ref=f4e30]:
+          - heading "ALFA" [level=1] [ref=f4e31]
+          - paragraph [ref=f4e32]: הדגם היחיד בקטלוג שלנו עם סורק פנים וכף יד מתכוונן לגובה — 7 אמצעי גישה, מצלמה ואזעקה
+          - generic [ref=f4e34]:
+            - generic [ref=f4e35]:
+              - generic [ref=f4e36]: ₪2,790
+              - generic [ref=f4e37]: ₪3,500
+              - generic [ref=f4e38]:
+                - generic [ref=f4e39]: 20%
+                - text: הנחה
+            - paragraph [ref=f4e40]: מחיר מחירון היצרן (Techom) מול מחיר המוקד — המחיר כולל התקנה מקצועית, הדרכת שימוש, ואחריות יבואן רשמי
+          - paragraph [ref=f4e41]: "מנעול חכם מתקדם לדלתות רב-בריח, רשפים ושריונית חוסם, עם שבעה אמצעי גישה שונים: זיהוי פנים מאובטח, זיהוי כף יד, טביעת אצבע, קוד אישי, כרטיס/צ'יפ, אפליקציה ומפתחות פיזיים לגיבוי — ללא הגבלת מספר משתמשים. הסורק הביומטרי ב-ALFA מתכוונן פיזית לגובה של כל משתמש, לזיהוי פנים וכף יד מדויק ומהיר במיוחד — טכנולוגיה שלא קיימת בשאר דגמי הקטלוג שלנו. מצלמה וצג מובנים מראים מי בדלת לפני שפותחים, ואזעקה מובנית מופעלת אוטומטית בניסיון פריצה או תלישה."
+          - list [ref=f4e42]:
+            - listitem [ref=f4e43]:
+              - generic [ref=f4e44]: ✓
+              - text: סורק זיהוי פנים וכף יד מתכוונן לגובה המשתמש — הדגם היחיד בקטלוג שלנו עם הטכנולוגיה הזו, לזיהוי מדויק ומהיר במיוחד
+            - listitem [ref=f4e45]:
+              - generic [ref=f4e46]: ✓
+              - text: "7 אמצעי גישה: זיהוי פנים, זיהוי כף יד, טביעת אצבע, קוד, כרטיס/צ'יפ, אפליקציה ומפתחות לגיבוי"
+            - listitem [ref=f4e47]:
+              - generic [ref=f4e48]: ✓
+              - text: מצלמה HD ושיחות וידאו LIVE + צג פנימי חכם
+            - listitem [ref=f4e49]:
+              - generic [ref=f4e50]: ✓
+              - text: אזעקה מובנית — מופעלת אוטומטית ב-3 ניסיונות כושלים או תלישה
+            - listitem [ref=f4e51]:
+              - generic [ref=f4e52]: ✓
+              - text: כפתור נטרול לשומרי שבת
+            - listitem [ref=f4e53]:
+              - generic [ref=f4e54]: ✓
+              - text: עמיד בגשם ובתנאי מזג אוויר, סוללת ליתיום 7.4V/5000mAh עם התרעות קוליות בעברית
+            - listitem [ref=f4e55]:
+              - generic [ref=f4e56]: ✓
+              - text: ללא הגבלת מספר משתמשים
+          - generic [ref=f4e57]:
+            - generic [ref=f4e59]:
+              - paragraph [ref=f4e60]: "צבע: רוזגולד"
+              - radiogroup "בחירת צבע" [ref=f4e61]:
+                - radio "רוזגולד" [checked] [ref=f4e62]
+                - radio "שחור" [ref=f4e63]
+            - generic [ref=f4e64]:
+              - link "קנו עכשיו — תשלום מאובטח ←" [ref=f4e65] [cursor=pointer]:
+                - /url: /checkout/alfa?color=roseGold
+              - paragraph [ref=f4e66]: תשלום מאובטח · משלוח והתקנה מתואמים · אחריות יבואן רשמי
+            - generic [ref=f4e67]:
+              - generic [ref=f4e68]: שם מלא
+              - textbox "שם מלא" [ref=f4e69]:
+                - /placeholder: "לדוגמה: מיכל כהן"
+              - generic [ref=f4e70]: טלפון
+              - textbox "טלפון" [ref=f4e71]:
+                - /placeholder: 050-0000000
+              - generic [ref=f4e72]: אזור מגורים
+              - textbox "אזור מגורים" [ref=f4e73]:
+                - /placeholder: "לדוגמה: רעננה"
+              - button "יש לי שאלה לפני שרוכשים — השאירו פרטים" [ref=f4e74]
+            - paragraph [ref=f4e75]:
+              - link "עדיין שוקלים? דברו איתנו בוואטסאפ לפני ההזמנה" [ref=f4e76] [cursor=pointer]:
+                - /url: https://wa.me/972500000000?text=%D7%94%D7%99%D7%99%2C%20%D7%99%D7%A9%20%D7%9C%D7%99%20%D7%A9%D7%90%D7%9C%D7%94%20%D7%9C%D7%92%D7%91%D7%99%20%D7%9E%D7%A0%D7%A2%D7%95%D7%9C%20ALFA
+      - generic [ref=f4e77]:
+        - heading "מי באמת נמצא ליד הדלת שלך?" [level=2] [ref=f4e78]
+        - paragraph [ref=f4e79]: כשאת לא בבית — מי באמת נמצא ליד הדלת שלך? עם מנעול רגיל אין לך דרך לדעת. ALFA מראה לך בצג ובאפליקציה מי מחכה בחוץ, לפני שמישהו נכנס. להורים מבוגרים שגרים לבד, לילדים שחוזרים הביתה בלי מבוגר, או סתם לשקט הנפש שלכם — עכשיו אתם רואים, לא רק מקווים.
+      - generic [ref=f4e80]:
+        - heading "איך זה עובד בשבילכם" [level=2] [ref=f4e81]
+        - generic [ref=f4e82]:
+          - generic [ref=f4e83]:
+            - heading "סורק זיהוי פנים וכף יד מתכוונן לגובה המשתמש — הדגם היחיד בקטלוג שלנו עם הטכנולוגיה הזו, לזיהוי מדויק ומהיר במיוחד" [level=3] [ref=f4e84]
+            - paragraph [ref=f4e85]: הסורק מתכוונן פיזית לגובה של כל בן משפחה — ילד, מבוגר או אורח — כך שהזיהוי הביומטרי מדויק ומהיר יותר, בלי להתכופף או למתוח יד באופן לא נוח.
+          - generic [ref=f4e86]:
+            - 'heading "7 אמצעי גישה: זיהוי פנים, זיהוי כף יד, טביעת אצבע, קוד, כרטיס/צ''יפ, אפליקציה ומפתחות לגיבוי" [level=3] [ref=f4e87]'
+            - paragraph [ref=f4e88]: כל בן משפחה בוחר איך להיכנס — טביעת אצבע, זיהוי פנים, זיהוי כף יד, קוד או כרטיס — בלי הגבלת מספר משתמשים. ותמיד יש גם מפתח פיזי לגיבוי, למקרה שהאלקטרוניקה לא זמינה.
+          - generic [ref=f4e89]:
+            - heading "מצלמה HD ושיחות וידאו LIVE + צג פנימי חכם" [level=3] [ref=f4e90]
+            - paragraph [ref=f4e91]: לפני שהדלת נפתחת, אתם כבר יודעים מי בחוץ — מהצג הפנימי החכם, משיחת וידאו חיה, או מהאפליקציה, גם כשאתם לא בבית. בחוץ יש גם פעמון חכם עם צליל איכותי.
+          - generic [ref=f4e92]:
+            - heading "אזעקה מובנית — מופעלת אוטומטית ב-3 ניסיונות כושלים או תלישה" [level=3] [ref=f4e93]
+            - paragraph [ref=f4e94]: ניסיון פריצה או תלישה של המכשיר מהדלת מפעיל אזעקה אוטומטית — לא רק נועל, גם מתריע.
+          - generic [ref=f4e95]:
+            - heading "כפתור נטרול לשומרי שבת" [level=3] [ref=f4e96]
+            - paragraph [ref=f4e97]: לבית שומר מסורת — כפתור ייעודי מנטרל את הפעולה החכמה של המנעול, כדי שתוכלו להשתמש בו בשבת בלי חשש.
+          - generic [ref=f4e98]:
+            - heading "עמיד בגשם ובתנאי מזג אוויר, סוללת ליתיום 7.4V/5000mAh עם התרעות קוליות בעברית" [level=3] [ref=f4e99]
+            - paragraph [ref=f4e100]: המערכת מדברת עברית מלאה ומתריעה בקול על מצב הדלת ועל מצב הסוללה מבעוד מועד, כדי שלא תופתעו — ובנויה לעמוד בגשם ובתנאי חוץ קשים לאורך זמן.
+      - generic [ref=f4e101]:
+        - heading "איפה ALFA נמצא בקטלוג שלנו" [level=2] [ref=f4e102]
+        - paragraph [ref=f4e103]: "ALFA הוא הדגם המתקדם ביותר שלנו, ובעל יתרון ייחודי: הוא הדגם היחיד בקטלוג שלנו עם סורק זיהוי פנים וכף יד שמתכוונן פיזית לגובה של כל משתמש — לזיהוי מדויק ומהיר יותר, גם לילדים וגם למבוגרים. Model T כולל גם הוא זיהוי פנים וכף יד, אך ללא מנגנון הכיוונון לגובה. בנוסף, ל-ALFA אין הגבלה על מספר המשתמשים (מול עד 150 ב-Model T). לכן ALFA מתאים במיוחד למי שרוצה את הדיוק והנוחות המקסימליים בזיהוי הביומטרי, וכן לבתים גדולים, מבנים משותפים או עסקים קטנים שצריכים גישה למספר בלתי מוגבל של אנשים."
+      - generic [ref=f4e104]:
+        - heading "השוואת דגמים" [level=2] [ref=f4e105]
+        - paragraph [ref=f4e106]: כל השורות מבוססות על המפרט המאומת של כל דגם — לא מומצא.
+        - table [ref=f4e109]:
+          - rowgroup [ref=f4e110]:
+            - row [ref=f4e111]:
+              - columnheader [ref=f4e112]
+              - columnheader "ALFA" [ref=f4e113]
+              - columnheader [ref=f4e114]:
+                - link "Model T" [ref=f4e115] [cursor=pointer]:
+                  - /url: /product/model-t
+              - columnheader [ref=f4e116]:
+                - link "Smart Plus" [ref=f4e117] [cursor=pointer]:
+                  - /url: /product/smart-plus
+              - columnheader [ref=f4e118]:
+                - link "Smart" [ref=f4e119] [cursor=pointer]:
+                  - /url: /product/smart
+          - rowgroup [ref=f4e120]:
+            - row [ref=f4e121]:
+              - cell "זיהוי פנים" [ref=f4e122]
+              - cell "✓" [ref=f4e123]
+              - cell "✓" [ref=f4e124]
+              - cell "—" [ref=f4e125]
+              - cell "—" [ref=f4e126]
+            - row [ref=f4e127]:
+              - cell "זיהוי כף יד" [ref=f4e128]
+              - cell "✓" [ref=f4e129]
+              - cell "✓" [ref=f4e130]
+              - cell "—" [ref=f4e131]
+              - cell "—" [ref=f4e132]
+            - row [ref=f4e133]:
+              - cell "סורק מתכוונן לגובה המשתמש" [ref=f4e134]
+              - cell "✓" [ref=f4e135]
+              - cell "—" [ref=f4e136]
+              - cell "—" [ref=f4e137]
+              - cell "—" [ref=f4e138]
+            - row [ref=f4e139]:
+              - cell "טביעת אצבע" [ref=f4e140]
+              - cell "✓" [ref=f4e141]
+              - cell "✓" [ref=f4e142]
+              - cell "✓" [ref=f4e143]
+              - cell "✓" [ref=f4e144]
+            - row [ref=f4e145]:
+              - cell "מצלמה בדלת" [ref=f4e146]
+              - cell "✓" [ref=f4e147]
+              - cell "✓" [ref=f4e148]
+              - cell "✓" [ref=f4e149]
+              - cell "—" [ref=f4e150]
+            - row [ref=f4e151]:
+              - cell "פתיחה בכרטיס/צ'יפ" [ref=f4e152]
+              - cell "✓" [ref=f4e153]
+              - cell "✓" [ref=f4e154]
+              - cell "✓" [ref=f4e155]
+              - cell "✓" [ref=f4e156]
+            - row [ref=f4e157]:
+              - cell "ניהול מהאפליקציה" [ref=f4e158]
+              - cell "✓" [ref=f4e159]
+              - cell "✓" [ref=f4e160]
+              - cell "✓" [ref=f4e161]
+              - cell "✓" [ref=f4e162]
+            - row [ref=f4e163]:
+              - cell "גיבוי מכני / מפתח פיזי (מוצהר)" [ref=f4e164]
+              - cell "✓" [ref=f4e165]
+              - cell "✓" [ref=f4e166]
+              - cell "✓" [ref=f4e167]
+              - cell "✓" [ref=f4e168]
+            - row [ref=f4e169]:
+              - cell "אזעקה מובנית בניסיון פריצה" [ref=f4e170]
+              - cell "✓" [ref=f4e171]
+              - cell "✓" [ref=f4e172]
+              - cell "✓" [ref=f4e173]
+              - cell "✓" [ref=f4e174]
+            - row [ref=f4e175]:
+              - cell "כפתור נטרול לשבת" [ref=f4e176]
+              - cell "✓" [ref=f4e177]
+              - cell "✓" [ref=f4e178]
+              - cell "✓" [ref=f4e179]
+              - cell "—" [ref=f4e180]
+            - row [ref=f4e181]:
+              - cell "מחיר המוקד" [ref=f4e182]
+              - cell "₪2,790(-20%)" [ref=f4e183]:
+                - text: ₪2,790
+                - generic [ref=f4e184]:
+                  - text: (-
+                  - generic [ref=f4e185]: 20%
+                  - text: )
+              - cell "₪2,590(-25%)" [ref=f4e186]:
+                - text: ₪2,590
+                - generic [ref=f4e187]:
+                  - text: (-
+                  - generic [ref=f4e188]: 25%
+                  - text: )
+              - cell "₪2,300(-16%)" [ref=f4e189]:
+                - text: ₪2,300
+                - generic [ref=f4e190]:
+                  - text: (-
+                  - generic [ref=f4e191]: 16%
+                  - text: )
+              - cell "₪1,790(-6%)" [ref=f4e192]:
+                - text: ₪1,790
+                - generic [ref=f4e193]:
+                  - text: (-
+                  - generic [ref=f4e194]: 6%
+                  - text: )
+      - generic [ref=f4e195]:
+        - heading "שאלות שכדאי לשאול לפני שמזמינים" [level=2] [ref=f4e196]
+        - generic [ref=f4e198]:
+          - group [ref=f4e199]:
+            - generic [ref=f4e201] [cursor=pointer]:
+              - text: ₪2,790 זה יקר למנעול?
+              - generic [ref=f4e202]: +
+          - group [ref=f4e203]:
+            - generic [ref=f4e205] [cursor=pointer]:
+              - text: מי בא להתקין את זה בבית שלי?
+              - generic [ref=f4e206]: +
+          - group [ref=f4e207]:
+            - generic [ref=f4e209] [cursor=pointer]:
+              - text: זה "פותח בישראל" כמו שכתוב בשאר האתר?
+              - generic [ref=f4e210]: +
+          - group [ref=f4e211]:
+            - generic [ref=f4e213] [cursor=pointer]:
+              - text: אני שומר שבת — אפשר להשתמש?
+              - generic [ref=f4e214]: +
+          - group [ref=f4e215]:
+            - generic [ref=f4e217] [cursor=pointer]:
+              - text: מה קורה אם נגמרת הסוללה?
+              - generic [ref=f4e218]: +
+          - group [ref=f4e219]:
+            - generic [ref=f4e221] [cursor=pointer]:
+              - text: מה ההבדל בין ALFA ל-Model T?
+              - generic [ref=f4e222]: +
+          - group [ref=f4e223]:
+            - generic [ref=f4e225] [cursor=pointer]:
+              - text: מה זה סורק מתכוונן לגובה, ולמה זה חשוב?
+              - generic [ref=f4e226]: +
+      - generic [ref=f4e227]:
+        - heading "מהרגע שהזמנתם ועד שהמנעול על הדלת" [level=2] [ref=f4e228]
+        - list [ref=f4e229]:
+          - listitem [ref=f4e230]: 1. ממלאים את הטופס למעלה (שם, טלפון, אזור מגורים).
+          - listitem [ref=f4e231]: 2. ניצור קשר תוך יום עסקים לתיאום מועד התקנה שנוח לכם.
+          - listitem [ref=f4e232]: 3. טכנאי מטעם המוקד מגיע, מתקין ומדריך אתכם על השימוש בבית.
+          - listitem [ref=f4e233]: 4. מקבלים אחריות ישירות מהמוקד — כתובת אחת לכל שאלה.
+  - contentinfo [ref=f4e234]:
+    - generic [ref=f4e235]:
+      - paragraph [ref=f4e236]: המוקד · מנעולים חכמים וכספות · חברה ישראלית · ישראל © 2026
+      - paragraph [ref=f4e237]:
+        - link "מדיניות פרטיות" [ref=f4e238] [cursor=pointer]:
+          - /url: /privacy
+        - link "מידע רגולטורי — כספות נשק" [ref=f4e239] [cursor=pointer]:
+          - /url: /regulation
+  - button "Open Next.js Dev Tools" [ref=f4e245] [cursor=pointer]

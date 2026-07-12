@@ -1,0 +1,230 @@
+- generic [active] [ref=f3e1]:
+  - banner [ref=f3e2]:
+    - generic [ref=f3e3]:
+      - link "המוקד" [ref=f3e4] [cursor=pointer]:
+        - /url: /
+      - navigation [ref=f3e6]:
+        - link "מנעולים חכמים" [ref=f3e7] [cursor=pointer]:
+          - /url: /locks
+        - link "כספות ביתיות" [ref=f3e8] [cursor=pointer]:
+          - /url: /safes/home
+        - link "כספות נשק" [ref=f3e9] [cursor=pointer]:
+          - /url: /safes/guns
+        - link "קורסים והכשרות" [ref=f3e10] [cursor=pointer]:
+          - /url: /courses
+        - link "רובוטיקה" [ref=f3e11] [cursor=pointer]:
+          - /url: /robotics
+        - link "התקנה ואחריות" [ref=f3e12] [cursor=pointer]:
+          - /url: /#why
+      - link "התקשרו עכשיו" [ref=f3e13] [cursor=pointer]:
+        - /url: tel:+97230000000
+  - main [ref=f3e14]:
+    - generic [ref=f3e16]:
+      - paragraph [ref=f3e17]:
+        - link "בית" [ref=f3e18] [cursor=pointer]:
+          - /url: /
+        - text: ">"
+        - link "כספות נשק" [ref=f3e19] [cursor=pointer]:
+          - /url: /safes/guns
+        - text: "> כספת נשק מודל F"
+      - generic [ref=f3e20]:
+        - generic [ref=f3e21]:
+          - generic [ref=f3e22]:
+            - button "הגדלת תמונה" [ref=f3e23]:
+              - img "כספת נשק מודל F" [ref=f3e24]
+              - generic: ⤢
+            - generic [ref=f3e25]:
+              - button "הגדלת תמונה" [ref=f3e26]:
+                - img "כספת נשק מודל F — תמונה נוספת" [ref=f3e27]
+                - generic: ⤢
+              - button "הגדלת תמונה" [ref=f3e28]:
+                - img "כספת נשק מודל F — תמונה נוספת" [ref=f3e29]
+                - generic: ⤢
+              - button "הגדלת תמונה" [ref=f3e30]:
+                - img "כספת נשק מודל F — תמונה נוספת" [ref=f3e31]
+                - generic: ⤢
+              - button "הגדלת תמונה" [ref=f3e32]:
+                - img "כספת נשק מודל F — תמונה נוספת" [ref=f3e33]
+                - generic: ⤢
+            - paragraph [ref=f3e34]: לחצו על תמונה להגדלה
+          - generic [ref=f3e35]:
+            - heading "מי מייצר, מי מתקין" [level=3] [ref=f3e36]
+            - paragraph [ref=f3e37]: כספת נשק מודל F מיוצרת על ידי Techom — יצרן כספות ישראלי, פיתוח ישראלי. המוקד היא חברה חיצונית שבחרה את הדגם לאחר בדיקה מעמיקה של השוק, מתאמת משלוח והתקנה, ונותנת עליה אחריות ושירות ישירים — כתובת אחת לכל שאלה, גם אחרי הרכישה.
+        - generic [ref=f3e38]:
+          - heading "כספת נשק מודל F" [level=1] [ref=f3e39]
+          - paragraph [ref=f3e40]: כספת נשק קלאסית ואמינה — פתיחה במפתח מכני בלבד, בלי סוללות
+          - generic [ref=f3e41]:
+            - generic [ref=f3e42]:
+              - generic [ref=f3e43]:
+                - generic [ref=f3e44]: ₪790
+                - generic [ref=f3e45]: ₪1,300
+                - generic [ref=f3e46]:
+                  - generic [ref=f3e47]: 39%
+                  - text: הנחה
+              - paragraph [ref=f3e48]: מחיר מחירון היצרן (Techom) מול מחיר המוקד — מחיר הכספת בלבד, משלוח והתקנה בנפרד
+            - generic [ref=f3e49]:
+              - generic [ref=f3e50]:
+                - text: "משלוח בלבד:"
+                - generic [ref=f3e51]: ₪90
+              - generic [ref=f3e52]:
+                - text: "משלוח + התקנה מקצועית:"
+                - generic [ref=f3e53]: ₪350
+          - paragraph [ref=f3e54]: "כספת נשק מודל F נבנתה לבעלי רישיון שרוצים פתרון פשוט ואמין: פתיחה במפתח מכני בלבד, בלי קודים, בלי סוללות ובלי טכנולוגיה שיכולה להשתבש בדיוק ברגע שאתם צריכים אותה. הגוף בעובי 4 מ״מ ודלת בעובי 8 מ״מ, עם שני בריחים נעים ושני בריחים מקובעים שנותנים אחיזה אמיתית למסגרת. הכספת מעוגנת לקיר בטון באמצעות 6 עוגנים בקוטר 14 מ״מ, ולפי הצהרת היצרן (Techom) היא עונה על התקן המעודכן לכספות נשק ועל דרישות אגף הירייה."
+          - list [ref=f3e55]:
+            - listitem [ref=f3e56]:
+              - generic [ref=f3e57]: ✓
+              - text: פתיחה במפתח מכני בלבד — בלי קודים, בלי סוללות, בלי מה שיכול להשתבש
+            - listitem [ref=f3e58]:
+              - generic [ref=f3e59]: ✓
+              - text: גוף בעובי 4 מ״מ ודלת בעובי 8 מ״מ — פלדה מלאה, לא פח דק
+            - listitem [ref=f3e60]:
+              - generic [ref=f3e61]: ✓
+              - text: 2 בריחים נעים + 2 בריחים מקובעים לאחיזה אמיתית במסגרת
+            - listitem [ref=f3e62]:
+              - generic [ref=f3e63]: ✓
+              - text: 6 עוגנים בקוטר 14 מ״מ לחיבור בטוח לקיר בטון
+            - listitem [ref=f3e64]:
+              - generic [ref=f3e65]: ✓
+              - text: "לפי הצהרת היצרן (Techom): עומדת בתקן המעודכן לכספות נשק ובדרישות אגף הירייה"
+            - listitem [ref=f3e66]:
+              - generic [ref=f3e67]: ✓
+              - text: משלוח והתקנה מתואמים ישירות מול המוקד — לא ערכת הרכבה עצמית מבולבלת
+          - generic [ref=f3e68]:
+            - generic [ref=f3e69]:
+              - link "קנו עכשיו — תשלום מאובטח ←" [ref=f3e70] [cursor=pointer]:
+                - /url: /checkout/model-f
+              - paragraph [ref=f3e71]: תשלום מאובטח · משלוח והתקנה מתואמים · אחריות יבואן רשמי
+            - generic [ref=f3e72]:
+              - generic [ref=f3e73]: שם מלא
+              - textbox "שם מלא" [ref=f3e74]:
+                - /placeholder: "לדוגמה: מיכל כהן"
+              - generic [ref=f3e75]: טלפון
+              - textbox "טלפון" [ref=f3e76]:
+                - /placeholder: 050-0000000
+              - generic [ref=f3e77]: אזור מגורים
+              - textbox "אזור מגורים" [ref=f3e78]:
+                - /placeholder: "לדוגמה: רעננה"
+              - button "יש לי שאלה לפני שרוכשים — השאירו פרטים" [ref=f3e79]
+            - paragraph [ref=f3e80]:
+              - link "עדיין שוקלים? דברו איתנו בוואטסאפ לפני ההזמנה" [ref=f3e81] [cursor=pointer]:
+                - /url: https://wa.me/972500000000?text=%D7%94%D7%99%D7%99%2C%20%D7%99%D7%A9%20%D7%9C%D7%99%20%D7%A9%D7%90%D7%9C%D7%94%20%D7%9C%D7%92%D7%91%D7%99%20%D7%9B%D7%A1%D7%A4%D7%AA%20%D7%A0%D7%A9%D7%A7%20%D7%9E%D7%95%D7%93%D7%9C%20F
+      - generic [ref=f3e82]:
+        - heading "כספת פשוטה, לא עוד דבר שיכול להתקלקל" [level=2] [ref=f3e83]
+        - paragraph [ref=f3e84]: "כשמדובר בנשק בבית עם ילדים, הדבר האחרון שאתם צריכים זה כספת עם סוללה שנגמרת או קוד שנשכח בדיוק ברגע הלא נכון. מודל F נפתחת במפתח מכני בלבד — בלי חשמל, בלי אפליקציה, בלי הפתעות. היא לא מנסה להיות ״חכמה״ — היא עושה דבר אחד ועושה אותו נכון: שומרת את הנשק שלכם מחוץ להישג ידם של ילדים, בכל שעה ובכל מצב."
+      - generic [ref=f3e85]:
+        - heading "מפרט טכני" [level=2] [ref=f3e86]
+        - paragraph [ref=f3e87]: כל השורות מבוססות על דף המוצר הרשמי של Techom — לא מומצא.
+        - table [ref=f3e89]:
+          - rowgroup [ref=f3e90]:
+            - row [ref=f3e91]:
+              - cell "מידות חיצוניות" [ref=f3e92]
+              - cell "36 × 26 × 26 ס״מ" [ref=f3e93]
+            - row [ref=f3e94]:
+              - cell "משקל" [ref=f3e95]
+              - cell "26 ק״ג" [ref=f3e96]
+            - row [ref=f3e97]:
+              - cell "פתיחה" [ref=f3e98]
+              - cell "מפתחות מכניים בלבד" [ref=f3e99]
+            - row [ref=f3e100]:
+              - cell "עובי גוף" [ref=f3e101]
+              - cell "4 מ״מ פלדה" [ref=f3e102]
+            - row [ref=f3e103]:
+              - cell "עובי דלת" [ref=f3e104]
+              - cell "8 מ״מ פלדה" [ref=f3e105]
+            - row [ref=f3e106]:
+              - cell "בריחים" [ref=f3e107]
+              - cell "2 נעים + 2 מקובעים" [ref=f3e108]
+            - row [ref=f3e109]:
+              - cell "עיגון לקיר" [ref=f3e110]
+              - cell "6 עוגנים, קוטר 14 מ״מ, לקיר בטון" [ref=f3e111]
+      - generic [ref=f3e112]:
+        - heading "איפה כספת נשק מודל F נמצאת בקטלוג שלנו" [level=2] [ref=f3e113]
+        - paragraph [ref=f3e114]: מודל F הוא הדגם הכי פשוט בקטלוג הכספות שלנו — מפתח מכני בלבד, בלי שום רכיב חשמלי. אם אתם מעדיפים גישה מהירה בטביעת אצבע או קודן דיגיטלי (עם מפתח מכני כגיבוי) — מודל E מתאים יותר, במחיר מעט גבוה יותר (₪1,050 מול ₪790).
+      - generic [ref=f3e115]:
+        - heading "השוואת דגמים" [level=2] [ref=f3e116]
+        - paragraph [ref=f3e117]: כל השורות מבוססות על המפרט המאומת של כל דגם — לא מומצא.
+        - table [ref=f3e120]:
+          - rowgroup [ref=f3e121]:
+            - row [ref=f3e122]:
+              - columnheader [ref=f3e123]
+              - columnheader "כספת נשק מודל F" [ref=f3e124]
+              - columnheader [ref=f3e125]:
+                - link "כספת נשק מודל E" [ref=f3e126] [cursor=pointer]:
+                  - /url: /safes/guns/model-e
+          - rowgroup [ref=f3e127]:
+            - row [ref=f3e128]:
+              - cell "טביעת אצבע" [ref=f3e129]
+              - cell "—" [ref=f3e130]
+              - cell "✓" [ref=f3e131]
+            - row [ref=f3e132]:
+              - cell "קודן דיגיטלי" [ref=f3e133]
+              - cell "—" [ref=f3e134]
+              - cell "✓" [ref=f3e135]
+            - row [ref=f3e136]:
+              - cell "מפתח מכני" [ref=f3e137]
+              - cell "✓" [ref=f3e138]
+              - cell "✓" [ref=f3e139]
+            - row [ref=f3e140]:
+              - cell "פועלת על סוללות" [ref=f3e141]
+              - cell "—" [ref=f3e142]
+              - cell "✓" [ref=f3e143]
+            - row [ref=f3e144]:
+              - cell "מחיר המוקד (הכספת בלבד)" [ref=f3e145]
+              - cell "₪790(-39%)" [ref=f3e146]:
+                - text: ₪790
+                - generic [ref=f3e147]:
+                  - text: (-
+                  - generic [ref=f3e148]: 39%
+                  - text: )
+              - cell "₪1,050(-25%)" [ref=f3e149]:
+                - text: ₪1,050
+                - generic [ref=f3e150]:
+                  - text: (-
+                  - generic [ref=f3e151]: 25%
+                  - text: )
+      - generic [ref=f3e152]:
+        - heading "תקן ורישוי" [level=2] [ref=f3e153]
+        - paragraph [ref=f3e154]: "לפי הצהרת היצרן (Techom): הכספת עומדת בתקן המעודכן לכספות נשק ובדרישות אגף הירייה. אנחנו ממליצים לוודא מול הגורם שהנפיק את הרישיון שלכם שהיא מתאימה לתנאי הרישיון הספציפיים שלכם."
+      - generic [ref=f3e155]:
+        - heading "שאלות שכדאי לשאול לפני שמזמינים" [level=2] [ref=f3e156]
+        - generic [ref=f3e158]:
+          - group [ref=f3e159]:
+            - generic [ref=f3e161] [cursor=pointer]:
+              - text: האם הכספת עומדת בתקן?
+              - generic [ref=f3e162]: +
+          - group [ref=f3e163]:
+            - generic [ref=f3e165] [cursor=pointer]:
+              - text: האם צריך סוללות או חשמל?
+              - generic [ref=f3e166]: +
+          - group [ref=f3e167]:
+            - generic [ref=f3e169] [cursor=pointer]:
+              - text: מה כולל המחיר, ומה עולה בנפרד?
+              - generic [ref=f3e170]: +
+          - group [ref=f3e171]:
+            - generic [ref=f3e173] [cursor=pointer]:
+              - text: מי מתקין את הכספת, ואיך היא מתחברת לקיר?
+              - generic [ref=f3e174]: +
+          - group [ref=f3e175]:
+            - generic [ref=f3e177] [cursor=pointer]:
+              - text: מי מייצר את הכספת?
+              - generic [ref=f3e178]: +
+          - group [ref=f3e179]:
+            - generic [ref=f3e181] [cursor=pointer]:
+              - text: מה ההבדל בין מודל F למודל E?
+              - generic [ref=f3e182]: +
+      - generic [ref=f3e183]:
+        - heading "מהרגע שהזמנתם ועד שהכספת בבית" [level=2] [ref=f3e184]
+        - list [ref=f3e185]:
+          - listitem [ref=f3e186]: 1. ממלאים את הטופס למעלה (שם, טלפון, אזור מגורים).
+          - listitem [ref=f3e187]: 2. ניצור קשר תוך יום עסקים לתיאום משלוח בלבד או משלוח + התקנה מקצועית — כפי שיתאים לכם.
+          - listitem [ref=f3e188]: 3. אם בחרתם בהתקנה — טכנאי מטעם המוקד מגיע ומעגן את הכספת לקיר הבטון בעצמו.
+          - listitem [ref=f3e189]: 4. מקבלים אחריות ישירות מהמוקד — כתובת אחת לכל שאלה.
+  - contentinfo [ref=f3e190]:
+    - generic [ref=f3e191]:
+      - paragraph [ref=f3e192]: המוקד · מנעולים חכמים וכספות · חברה ישראלית · ישראל © 2026
+      - paragraph [ref=f3e193]:
+        - link "מדיניות פרטיות" [ref=f3e194] [cursor=pointer]:
+          - /url: /privacy
+        - link "מידע רגולטורי — כספות נשק" [ref=f3e195] [cursor=pointer]:
+          - /url: /regulation
+  - button "Open Next.js Dev Tools" [ref=f3e201] [cursor=pointer]

@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+:root {
+  --color-navy: #1e3a56;
+  --color-navy-deep: #12283d;
+  --color-copper: #c17b4c;
+  --color-gold: #d9a24c;
+  --color-cream: #f7f3ec;
+  --color-charcoal: #2b2620;
+  --color-gray: #8a8072;
+  --color-sage: #4c7a5e;
+  --color-amber: #c98a2e;
+  --color-brick: #ad4b3e;
+  --color-line: rgba(43, 38, 32, 0.12);
+
+  --radius-s: 6px;
+  --radius-m: 10px;
+  --radius-l: 18px;
+
+  --shadow-card:
+    0 1px 2px rgba(18, 40, 61, 0.06), 0 8px 24px rgba(18, 40, 61, 0.08);
+}
+
+@theme inline {
+  --color-navy: var(--color-navy);
+  --color-navy-deep: var(--color-navy-deep);
+  --color-copper: var(--color-copper);
+  --color-gold: var(--color-gold);
+  --color-cream: var(--color-cream);
+  --color-charcoal: var(--color-charcoal);
+  --color-gray: var(--color-gray);
+  --color-sage: var(--color-sage);
+  --color-amber: var(--color-amber);
+  --color-brick: var(--color-brick);
+
+  --font-display: var(--font-frank-ruhl), serif;
+  --font-body: var(--font-heebo), sans-serif;
+  --font-num: var(--font-rubik), sans-serif;
+}
+
+html {
+  direction: rtl;
+}
+
+body {
+  background: var(--color-cream);
+  color: var(--color-charcoal);
+  font-family: var(--font-body);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  color: var(--color-navy-deep);
+  text-wrap: balance;
+}
+
+.num {
+  font-family: var(--font-num);
+  font-variant-numeric: tabular-nums;
+}
+
+bdi {
+  unicode-bidi: isolate;
+}
+
+@keyframes window-breathe {
+  0%,
+  100% {
+    opacity: 0.75;
+    box-shadow:
+      0 0 18px 5px rgba(217, 162, 76, 0.8),
+      0 0 50px 14px rgba(217, 162, 76, 0.25);
+  }
+  50% {
+    opacity: 1;
+    box-shadow:
+      0 0 26px 8px rgba(217, 162, 76, 1),
+      0 0 70px 22px rgba(217, 162, 76, 0.4);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .window-lit {
+    animation: none !important;
+    opacity: 1 !important;
+  }
+}

@@ -1,0 +1,30 @@
+[   10485ms] [WARNING] [GSI_LOGGER]: Your client application uses one of the Google One Tap prompt UI status methods that may stop functioning when FedCM becomes mandatory. Refer to the migration guide to update your code accordingly and opt-in to FedCM to test your changes. Learn more: https://developers.google.com/identity/gsi/web/guides/fedcm-migration?s=dc#display_moment and https://developers.google.com/identity/gsi/web/guides/fedcm-migration?s=dc#skipped_moment @ https://accounts.google.com/gsi/client:86
+[   12449ms] [ERROR] The request has been aborted. @ https://chatgpt.com/:0
+[   12450ms] [ERROR] [GSI_LOGGER]: FedCM get() rejects with AbortError: signal is aborted without reason @ https://chatgpt.com/cdn/assets/2340486e-mb21rh7fsts2xmrh.js:27
+[   12747ms] [ERROR] `DialogContent` requires a `DialogTitle` for the component to be accessible for screen reader users.
+
+If you want to hide the `DialogTitle`, you can wrap it with our VisuallyHidden component.
+
+For more information, see https://radix-ui.com/primitives/docs/components/dialog @ https://chatgpt.com/cdn/assets/2340486e-mb21rh7fsts2xmrh.js:27
+[   20723ms] [WARNING] Datadog Browser SDK: Customer data exceeds the recommended 3KiB threshold. More details: https://docs.datadoghq.com/real_user_monitoring/browser/troubleshooting/#customer-data-exceeds-the-recommended-threshold-warning @ https://auth-cdn.oaistatic.com/assets/datadog-BTgRrIvw.js:6
+[  382767ms] [WARNING] Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}. @ https://chatgpt.com/cdn/assets/4813494d-l2qppef9tkwaz2nr.js:124
+[ 2262953ms] [WARNING] Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}. @ https://chatgpt.com/cdn/assets/4813494d-l2qppef9tkwaz2nr.js:124
+[ 2900933ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ https://chatgpt.com/ces/statsc/flush:0
+[ 2900940ms] [ERROR] TypeError: Failed to fetch
+    at o (https://chatgpt.com/cdn/assets/2340486e-mb21rh7fsts2xmrh.js:26:3287)
+    at Gre.postMetrics (https://chatgpt.com/cdn/assets/4813494d-l2qppef9tkwaz2nr.js:2:64153)
+    at https://chatgpt.com/cdn/assets/4813494d-l2qppef9tkwaz2nr.js:2:63525 {json: {"counters":[{"namespace":"default","metric":"iden…,"value":1}],"histograms":[],"client_type":"web"}} @ https://chatgpt.com/cdn/assets/2340486e-mb21rh7fsts2xmrh.js:27
+[ 2900951ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ https://chatgpt.com/backend-api/sentinel/ping:0
+[ 2900963ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ https://chatgpt.com/backend-api/sentinel/heartbeat:0
+[ 2902351ms] [ERROR] WebSocket connection to 'wss://ws.chatgpt.com/p25/ws/user/user-F7DJ0TPVBHaXOKoa3y7yYYor?verify=1783856261-UTCsbTDOXewhgrLpTsKAa30bPRGMDo6fVB4jpRQoL4E%253D' failed: Error in connection establishment: net::ERR_NAME_NOT_RESOLVED @ https://chatgpt.com/cdn/assets/4813494d-l2qppef9tkwaz2nr.js:79
+[ 2904698ms] [ERROR] WebSocket connection to 'wss://ws.chatgpt.com/p25/ws/user/user-F7DJ0TPVBHaXOKoa3y7yYYor?verify=1783856261-UTCsbTDOXewhgrLpTsKAa30bPRGMDo6fVB4jpRQoL4E%253D' failed: Error in connection establishment: net::ERR_NAME_NOT_RESOLVED @ https://chatgpt.com/cdn/assets/4813494d-l2qppef9tkwaz2nr.js:79
+[ 5993807ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ https://chatgpt.com/ces/v1/telemetry/intake?ddforward=%2Fapi%2Fv2%2Flogs%3Fddsource%3Dbrowser%26dd-api-key%3Dpub1f79f8ac903a5872ae5f53026d20a77c%26dd-evp-origin-version%3D6.22.0%26dd-evp-origin%3Dbrowser%26dd-request-id%3D37ab718c-2db5-4274-9398-e1057b3ffe90:0
+[ 5993850ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ https://chatgpt.com/backend-api/sentinel/heartbeat:0
+[ 5993940ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ https://chatgpt.com/ces/v1/telemetry/intake?ddforward=%2Fapi%2Fv2%2Flogs%3Fddsource%3Dbrowser%26dd-api-key%3Dpub1f79f8ac903a5872ae5f53026d20a77c%26dd-evp-origin-version%3D6.22.0%26dd-evp-origin%3Dbrowser%26dd-request-id%3D90bef678-fe4a-47e3-8614-ac5bbfbc4942:0
+[ 5995126ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ https://chatgpt.com/backend-api/celsius/ws/user:0
+[ 5997474ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ https://chatgpt.com/backend-api/celsius/ws/user:0
+[17476682ms] [ERROR] Failed to load resource: net::ERR_HTTP2_PROTOCOL_ERROR @ https://chatgpt.com/ces/statsc/flush:0
+[17476682ms] [ERROR] TypeError: Failed to fetch
+    at o (https://chatgpt.com/cdn/assets/2340486e-mb21rh7fsts2xmrh.js:26:3287)
+    at Gre.postMetrics (https://chatgpt.com/cdn/assets/4813494d-l2qppef9tkwaz2nr.js:2:64153)
+    at https://chatgpt.com/cdn/assets/4813494d-l2qppef9tkwaz2nr.js:2:63525 {json: {"counters":[{"namespace":"ws","metric":"pubsub.fe…,"value":2}],"histograms":[],"client_type":"web"}} @ https://chatgpt.com/cdn/assets/2340486e-mb21rh7fsts2xmrh.js:27

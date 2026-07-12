@@ -1,0 +1,161 @@
+- generic [active] [ref=f9e1]:
+  - banner [ref=f9e2]:
+    - generic [ref=f9e3]:
+      - link "המוקד" [ref=f9e4] [cursor=pointer]:
+        - /url: /
+      - navigation [ref=f9e6]:
+        - link "מנעולים חכמים" [ref=f9e7] [cursor=pointer]:
+          - /url: /locks
+        - link "כספות ביתיות" [ref=f9e8] [cursor=pointer]:
+          - /url: /safes/home
+        - link "כספות נשק" [ref=f9e9] [cursor=pointer]:
+          - /url: /safes/guns
+        - link "קורסים והכשרות" [ref=f9e10] [cursor=pointer]:
+          - /url: /courses
+        - link "רובוטיקה" [ref=f9e11] [cursor=pointer]:
+          - /url: /robotics
+        - link "התקנה ואחריות" [ref=f9e12] [cursor=pointer]:
+          - /url: /#why
+      - link "התקשרו עכשיו" [ref=f9e13] [cursor=pointer]:
+        - /url: tel:+97230000000
+  - main [ref=f9e14]:
+    - generic [ref=f9e16]:
+      - generic [ref=f9e17]:
+        - paragraph [ref=f9e18]: המוקד · אבטחה חכמה לבית הישראלי
+        - 'heading "המוקד הישראלי לאבטחה: בוחרים, מתקינים, ואחראים — הכל תחת קורת גג אחת." [level=1] [ref=f9e19]'
+        - paragraph [ref=f9e20]: מנעולים חכמים וכספות שנבחרו ונבדקו על ידינו, עם התקנה ארצית ואחריות מורחבת — בלי לרדוף אחרי יבואן, מתקין, ומוקד שירות בנפרד.
+        - generic [ref=f9e21]:
+          - link "בדקו מה מתאים לבית שלכם" [ref=f9e22] [cursor=pointer]:
+            - /url: "#leads"
+          - link "דברו איתנו בוואטסאפ" [ref=f9e23] [cursor=pointer]:
+            - /url: https://wa.me/972500000000
+        - generic [ref=f9e24]:
+          - generic [ref=f9e25]: שירות ישראלי ישיר
+          - generic [ref=f9e27]: אחריות מורחבת
+          - generic [ref=f9e29]: התקנה ארצית מהירה
+      - img "שכונה ישראלית בלילה, חלון אחד דולק באור חם — סמל המוקד" [ref=f9e31]:
+        - generic [ref=f9e32]: Placeholder — להחליף בתצלום/רינדור פוטוריאליסטי לפני שקה
+    - generic [ref=f9e132]:
+      - generic [ref=f9e134]:
+        - link "מנעולים חכמים" [ref=f9e135] [cursor=pointer]:
+          - /url: /locks
+          - img "מנעולים חכמים" [ref=f9e136]
+        - generic [ref=f9e137]:
+          - heading "מנעולים חכמים" [level=3] [ref=f9e138]
+          - paragraph [ref=f9e139]: הטכנולוגיה המאובטחת ביותר, בדלת שלכם — עם גיבוי מלא גם בלי סוללה וגם בלי אינטרנט.
+          - link "לצפייה בדגמים ←" [ref=f9e140] [cursor=pointer]:
+            - /url: /locks
+      - generic [ref=f9e142]:
+        - link "כספות ביתיות" [ref=f9e143] [cursor=pointer]:
+          - /url: /safes/home
+          - img "כספות ביתיות" [ref=f9e144]
+        - generic [ref=f9e145]:
+          - heading "כספות ביתיות" [level=3] [ref=f9e146]
+          - paragraph [ref=f9e147]: מקום בטוח למה שחשוב - מסמכים, תכשיטים וזיכרונות, בכספת שמתאימה לבית שלכם.
+          - link "לכספות הביתיות שלנו ←" [ref=f9e148] [cursor=pointer]:
+            - /url: /safes/home
+      - generic [ref=f9e150]:
+        - link "כספות נשק" [ref=f9e151] [cursor=pointer]:
+          - /url: /safes/guns
+          - img "כספות נשק" [ref=f9e152]
+        - generic [ref=f9e153]:
+          - heading "כספות נשק" [level=3] [ref=f9e154]
+          - paragraph [ref=f9e155]: בטיחות משפחתית, לא ציוד טקטי — עומדות בתקן, מותקנות בבית שלכם תוך ימים ספורים.
+          - link "לכספות הנשק שלנו ←" [ref=f9e156] [cursor=pointer]:
+            - /url: /safes/guns
+      - generic [ref=f9e158]:
+        - link "קורסים והכשרות" [ref=f9e159] [cursor=pointer]:
+          - /url: /courses
+        - generic [ref=f9e160]:
+          - heading "קורסים והכשרות" [level=3] [ref=f9e161]
+          - paragraph [ref=f9e162]: הכשרה מטעם החברה שבאמת מתקינה — לימודי התקנה ותכנות מנעולים חכמים ממי שעושה את זה בשטח.
+          - link "לפרטי הקורסים ←" [ref=f9e163] [cursor=pointer]:
+            - /url: /courses
+      - generic [ref=f9e165]:
+        - link "רובוטיקה מבוססת AI" [ref=f9e166] [cursor=pointer]:
+          - /url: /robotics
+        - generic [ref=f9e167]:
+          - heading "רובוטיקה מבוססת AI" [level=3] [ref=f9e168]
+          - paragraph [ref=f9e169]: רובוטים תעשייתיים ודמויי-אדם, מנוהלים בפלטפורמת בקרה שפיתחנו בעצמנו בישראל.
+          - link "בקשו הצעת מחיר ←" [ref=f9e170] [cursor=pointer]:
+            - /url: /robotics
+    - generic [ref=f9e172]:
+      - heading "מהתקנות אמיתיות שלנו, ברחבי הארץ" [level=2] [ref=f9e173]
+      - paragraph [ref=f9e174]: לא הדמיות שיווקיות — תמונות מהתקנות בפועל, אצל לקוחות אמיתיים, על ידי הטכנאים שלנו.
+      - generic [ref=f9e175]:
+        - button "הגדלת תמונה מהתקנה אמיתית" [ref=f9e176]:
+          - img "התקנת מנעול חכם ALFA בבית לקוח" [ref=f9e177]
+          - generic: ⤢
+        - button "הגדלת תמונה מהתקנה אמיתית" [ref=f9e178]:
+          - img "התקנת מנעול חכם Model T בבית לקוח" [ref=f9e179]
+          - generic: ⤢
+        - button "הגדלת תמונה מהתקנה אמיתית" [ref=f9e180]:
+          - img "התקנת מנעול חכם Smart Plus בבית לקוח" [ref=f9e181]
+          - generic: ⤢
+        - button "הגדלת תמונה מהתקנה אמיתית" [ref=f9e182]:
+          - img "התקנת מנעול חכם ALFA בבית לקוח" [ref=f9e183]
+          - generic: ⤢
+        - button "הגדלת תמונה מהתקנה אמיתית" [ref=f9e184]:
+          - img "התקנת מנעול חכם Model T בבית לקוח" [ref=f9e185]
+          - generic: ⤢
+        - button "הגדלת תמונה מהתקנה אמיתית" [ref=f9e186]:
+          - img "התקנת מנעול חכם Smart בבית לקוח" [ref=f9e187]
+          - generic: ⤢
+    - generic [ref=f9e189]:
+      - heading "למה המוקד" [level=2] [ref=f9e190]
+      - generic [ref=f9e191]:
+        - generic [ref=f9e192]:
+          - heading "שירות ישראלי ישיר" [level=3] [ref=f9e200]
+          - paragraph [ref=f9e201]: מהבחירה של הדגם ועד ההתקנה בבית שלכם — הכל מתבצע ישירות על ידי צוות המוקד, בלי שרשרת מתווכים.
+        - generic [ref=f9e202]:
+          - generic [ref=f9e203]: ⚙️
+          - heading "הכל תחת קורת גג אחת" [level=3] [ref=f9e204]
+          - paragraph [ref=f9e205]: מוצר, התקנה, אחריות ושירות — מגיעים מאותה חברה. יש כתובת אחת לפנות אליה, תמיד.
+        - generic [ref=f9e206]:
+          - generic [ref=f9e207]: 🚚
+          - heading "פריסה ארצית וזמינות מהירה" [level=3] [ref=f9e208]
+          - paragraph [ref=f9e209]: מוקד המתקינים שלנו פרוס בכל הארץ, עם יעד להתקנה תוך 48–72 שעות מרגע התיאום.
+        - generic [ref=f9e210]:
+          - generic [ref=f9e211]: 💬
+          - heading "שקיפות מחיר מלאה" [level=3] [ref=f9e212]
+          - paragraph [ref=f9e213]: המחיר מוצג מראש, כולל התקנה — בלי "השאירו פרטים ונחזור עם הצעה", בלי אותיות קטנות.
+    - generic [ref=f9e216]:
+      - generic [ref=f9e217]:
+        - heading "מי מייצר, מי מתקין — בלי לערבב" [level=2] [ref=f9e218]
+        - paragraph [ref=f9e219]: המנעולים והכספות שלנו מיוצרים על ידי Techom — יצרן ישראלי עצמאי, פיתוח ישראלי. המוקד היא חברה חיצונית שבודקת את השוק לעומק, בוחרת את הדגמים שאנחנו עומדים מאחוריהם, מתקינה אותם בעצמה בבית שלכם, ונותנת עליהם אחריות ושירות ישירים.
+        - paragraph [ref=f9e220]: כתובת אחת לכל שאלה — לפני ההזמנה, ביום ההתקנה, ובכל יום שאחריו.
+      - generic [ref=f9e221]:
+        - generic [ref=f9e222]:
+          - paragraph [ref=f9e223]: היצרן
+          - paragraph [ref=f9e224]: Techom — יצרן מנעולים וכספות ישראלי, אחראי על הפיתוח והייצור של המוצר עצמו.
+        - generic [ref=f9e225]:
+          - paragraph [ref=f9e226]: המוקד
+          - paragraph [ref=f9e227]: בוחרים את הדגם אחרי בדיקה מעמיקה, מתקינים בעצמנו, ואחראים על האחריות והשירות מקצה לקצה.
+    - generic [ref=f9e229]:
+      - heading "הוכחה חברתית" [level=2] [ref=f9e230]
+      - generic [ref=f9e231]:
+        - generic [ref=f9e232]:
+          - paragraph [ref=f9e233]: “אחרי פריצה בשכונה שלנו התחלתי לחפש מנעול חכם, אבל כל מה שמצאתי הרגיש כמו עוד גאדג'ט. מה שכבש אותי אצל המוקד זו התשובה הפשוטה לשאלה שהכי הפחידה אותי — מה קורה כשנגמרת הסוללה. הראו לי בדיוק איך זה עובד לפני שהתקינו, והטכנאי שהגיע היה סבלני והסביר לילדים שלי איך להזין קוד. היום זה פשוט חלק מהבית.”
+          - paragraph [ref=f9e234]: מיכל ל., רעננה
+        - generic [ref=f9e235]:
+          - paragraph [ref=f9e236]: “כבעל רישיון נשק הייתי צריך כספת שעומדת בתקן בלי פשרות, אבל גם לא רציתי שהסלון שלי ייראה כמו מחסן ציוד. לפי היצרן, הכספת עומדת בתקן המעודכן לכספות נשק ובדרישות אגף הירייה, והיא נראית כמו רהיט בית רגיל — וזה בדיוק מה שרציתי בבית עם ילדים. התיאום וההתקנה היו מהירים בהרבה ממה שציפיתי.”
+          - paragraph [ref=f9e237]: אבינועם כ., מודיעין
+        - generic [ref=f9e238]:
+          - paragraph [ref=f9e239]: “יש לי חנות עם כמה עובדים במשמרות, וניהול מפתחות היה סיוט אמיתי. עברתי למנעול חכם של המוקד עם קודים נפרדים לכל עובד, ופשוט מבטלים קוד באפליקציה כשמישהו עוזב. כשהייתה תקלה קטנה, טכנאי הגיע באותו יום.”
+          - paragraph [ref=f9e240]: רונן פ., בעל עסק, פתח תקווה
+    - generic [ref=f9e243]:
+      - generic [ref=f9e244]:
+        - heading "שקט נפשי לבית שלכם מתחיל בשיחה קצרה" [level=3] [ref=f9e245]
+        - paragraph [ref=f9e246]: השאירו שם וטלפון ונחזור אליכם עם ההמלצה המתאימה לבית או לעסק שלכם.
+      - generic [ref=f9e247]:
+        - textbox "מספר טלפון" [ref=f9e248]
+        - button "שלחו לי הצעה" [ref=f9e249]
+  - contentinfo [ref=f9e250]:
+    - generic [ref=f9e251]:
+      - paragraph [ref=f9e252]: המוקד · מנעולים חכמים וכספות · חברה ישראלית · ישראל © 2026
+      - paragraph [ref=f9e253]:
+        - link "מדיניות פרטיות" [ref=f9e254] [cursor=pointer]:
+          - /url: /privacy
+        - link "מידע רגולטורי — כספות נשק" [ref=f9e255] [cursor=pointer]:
+          - /url: /regulation
+  - button "Open Next.js Dev Tools" [ref=f9e261] [cursor=pointer]
