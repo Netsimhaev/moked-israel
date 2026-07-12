@@ -1,0 +1,97 @@
+- generic [active] [ref=f2e1]:
+  - banner [ref=f2e2]:
+    - generic [ref=f2e3]:
+      - link "המוקד" [ref=f2e4] [cursor=pointer]:
+        - /url: /
+      - navigation [ref=f2e6]:
+        - link "מנעולים חכמים" [ref=f2e7] [cursor=pointer]:
+          - /url: /locks
+        - link "כספות ביתיות" [ref=f2e8] [cursor=pointer]:
+          - /url: /safes/home
+        - link "כספות נשק" [ref=f2e9] [cursor=pointer]:
+          - /url: /safes/guns
+        - link "קורסים והכשרות" [ref=f2e10] [cursor=pointer]:
+          - /url: /courses
+        - link "רובוטיקה" [ref=f2e11] [cursor=pointer]:
+          - /url: /robotics
+        - link "התקנה ואחריות" [ref=f2e12] [cursor=pointer]:
+          - /url: /#why
+      - link "התקשרו עכשיו" [ref=f2e13] [cursor=pointer]:
+        - /url: tel:+97230000000
+  - main [ref=f2e14]:
+    - generic [ref=f2e16]:
+      - generic [ref=f2e17]:
+        - generic [ref=f2e18]:
+          - paragraph [ref=f2e19]: כספת ביתית · תשלום מאובטח
+          - heading "כספת B600" [level=1] [ref=f2e20]
+          - paragraph [ref=f2e21]: כספת עסקית כבדה — טביעת אצבע, קוד ומפתח מכני, דלת בעובי 10 מ״מ
+          - paragraph [ref=f2e22]: ₪2,400
+        - img "כספת B600" [ref=f2e24]
+      - generic [ref=f2e25]:
+        - generic [ref=f2e26]: תשלום מאובטח ומוצפן
+        - generic [ref=f2e28]: אחריות יבואן רשמי
+        - generic [ref=f2e30]: כתובת אחת לכל שאלה — לפני ואחרי הרכישה
+      - generic [ref=f2e32]:
+        - generic [ref=f2e33]:
+          - generic [ref=f2e34]:
+            - heading "פרטי הרוכש" [level=2] [ref=f2e35]
+            - generic [ref=f2e36]: שם מלא
+            - textbox "שם מלא" [ref=f2e37]:
+              - /placeholder: "לדוגמה: מיכל כהן"
+            - generic [ref=f2e38]: טלפון
+            - textbox "טלפון" [ref=f2e39]:
+              - /placeholder: 050-0000000
+            - generic [ref=f2e40]: אימייל
+            - textbox "אימייל" [ref=f2e41]:
+              - /placeholder: name@example.com
+            - radiogroup "אופן קבלת המוצר" [ref=f2e42]:
+              - paragraph [ref=f2e43]: אופן קבלת המוצר
+              - generic [ref=f2e44]:
+                - generic [ref=f2e45] [cursor=pointer]:
+                  - radio "משלוח עד הבית" [checked] [ref=f2e46]
+                  - text: משלוח עד הבית
+                - generic [ref=f2e47] [cursor=pointer]:
+                  - radio "איסוף עצמאי מאולם התצוגה — אולם התצוגה, רחוב האורגים 34, אשדוד" [ref=f2e48]
+                  - text: איסוף עצמאי מאולם התצוגה — אולם התצוגה, רחוב האורגים 34, אשדוד
+            - generic [ref=f2e49]: כתובת למשלוח והתקנה
+            - textbox "כתובת למשלוח והתקנה" [ref=f2e50]:
+              - /placeholder: רחוב, מספר בית, עיר
+          - generic [ref=f2e51] [cursor=pointer]:
+            - checkbox "התקנה מקצועית על ידי טכנאי מטעם המוקד — ₪350מומלץ כולל את המשלוח — לא משולם בנפרד. אפשר לבטל ולתאם משלוח בלבד, אבל רוב הלקוחות מעדיפים שנעגן את זה בעצמנו." [checked] [ref=f2e52]
+            - generic [ref=f2e53]:
+              - generic [ref=f2e54]: התקנה מקצועית על ידי טכנאי מטעם המוקד — ₪350מומלץ
+              - generic [ref=f2e55]: כולל את המשלוח — לא משולם בנפרד. אפשר לבטל ולתאם משלוח בלבד, אבל רוב הלקוחות מעדיפים שנעגן את זה בעצמנו.
+          - generic [ref=f2e56] [cursor=pointer]:
+            - checkbox "הוסיפו גם ALFA — 5% הנחה לרוכשי כספת B600 ₪2,790 ₪2,651 — מצטרף להזמנה הזו, בלי תשלום נפרד." [ref=f2e57]
+            - generic [ref=f2e58]:
+              - generic [ref=f2e59]: הוסיפו גם ALFA — 5% הנחה לרוכשי כספת B600
+              - generic [ref=f2e60]:
+                - generic [ref=f2e61]: ₪2,790
+                - generic [ref=f2e62]: ₪2,651
+                - text: — מצטרף להזמנה הזו, בלי תשלום נפרד.
+          - button "המשך לתשלום מאובטח — ₪2,750" [ref=f2e63]
+        - generic [ref=f2e64]:
+          - heading "סיכום הזמנה" [level=2] [ref=f2e65]
+          - generic [ref=f2e66]:
+            - generic [ref=f2e67]:
+              - term [ref=f2e68]: כספת B600
+              - definition [ref=f2e69]: ₪2,400
+            - generic [ref=f2e70]:
+              - term [ref=f2e71]: משלוח (כלול בהתקנה)
+              - definition [ref=f2e72]: ללא עלות נפרדת
+            - generic [ref=f2e73]:
+              - term [ref=f2e74]: התקנה מקצועית (כולל משלוח)
+              - definition [ref=f2e75]: ₪350
+          - generic [ref=f2e76]:
+            - term [ref=f2e77]: סה"כ לתשלום
+            - definition [ref=f2e78]: ₪2,750
+          - paragraph [ref=f2e79]: פרטי האשראי מוזנים ישירות במסך המאובטח של ספק הסליקה — לא נשמרים אצלנו בשום שלב.
+  - contentinfo [ref=f2e80]:
+    - generic [ref=f2e81]:
+      - paragraph [ref=f2e82]: המוקד · מנעולים חכמים וכספות · חברה ישראלית · ישראל © 2026
+      - paragraph [ref=f2e83]:
+        - link "מדיניות פרטיות" [ref=f2e84] [cursor=pointer]:
+          - /url: /privacy
+        - link "מידע רגולטורי — כספות נשק" [ref=f2e85] [cursor=pointer]:
+          - /url: /regulation
+  - button "Open Next.js Dev Tools" [ref=f2e91] [cursor=pointer]

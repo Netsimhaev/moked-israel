@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Logo } from "@/components/Logo";
 import { Button } from "@/components/Button";
 import { LeadForm } from "@/components/LeadForm";
@@ -35,6 +36,16 @@ export default function MichalCampaignPage() {
             <Button variant="primary" href="#lead">
               קבלו הצעת מחיר תוך יום עסקים
             </Button>
+          </div>
+          <div className="relative mx-auto mt-10 aspect-[16/9] w-full max-w-[560px] overflow-hidden rounded-[var(--radius-l)] shadow-[var(--shadow-card)]">
+            <Image
+              src="/images/locks/category-hero.png"
+              alt="מנעול חכם מותקן בכניסה לבית"
+              fill
+              priority
+              sizes="(min-width: 640px) 560px, 100vw"
+              className="object-cover"
+            />
           </div>
         </div>
       </section>

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { TrustBadge } from "@/components/TrustBadge";
 
 // מסלול נוסף יתווסף כאן כשיהיה תוכן אמיתי לו — לא להוסיף כרטיס placeholder.
 const courses = [
@@ -9,6 +10,13 @@ const courses = [
     title: "התקנה ותכנות מנעולים חכמים",
     duration: "7 פרקים · 24 שיעורים",
     level: "מתחילים ומנעולנים מוסמכים",
+    blurb:
+      "הקורס נבנה מתוך צורך אמיתי בשטח — כלים פרקטיים להתקנה, תכנות ומכירה של מנעולים חכמים, ממי שמתקין בפועל בבתי לקוחות ברחבי הארץ.",
+    stats: [
+      { label: "היקף", value: "7 פרקים · 24 שיעורים" },
+      { label: "בסיום", value: "תעודת מתקין מוסמך" },
+      { label: "כולל", value: "ליווי אישי בבית לקוח" },
+    ],
   },
 ];
 
@@ -32,33 +40,47 @@ export default function CoursesPage() {
               חדשים בתחום.
             </p>
 
-            <div className="mt-10 grid gap-5 sm:grid-cols-2">
-              {courses.map((c, i) => (
-                <div
-                  key={i}
-                  className="flex flex-col overflow-hidden rounded-[var(--radius-l)] border border-[var(--color-line)] bg-white shadow-[var(--shadow-card)]"
+            <div className="mt-6 flex flex-wrap gap-3">
+              <TrustBadge variant="light" label="מלמדים מתקינים בפועל, לא תיאורטיקנים" />
+              <TrustBadge variant="light" label="ליווי אישי בבית לקוח" />
+              <TrustBadge variant="light" label="תעודת מתקין מוסמך בסיום" />
+            </div>
+
+            <div className="mt-10 grid gap-5">
+              {courses.map((c) => (
+                <Link
+                  key={c.slug}
+                  href={`/courses/${c.slug}`}
+                  className="group grid gap-6 overflow-hidden rounded-[var(--radius-l)] border border-[var(--color-line)] bg-white p-6 shadow-[var(--shadow-card)] transition-shadow duration-200 hover:shadow-[0_4px_10px_rgba(18,40,61,0.1),0_16px_36px_rgba(18,40,61,0.14)] sm:grid-cols-[1.3fr_1fr] sm:p-8"
                 >
-                  <div
-                    className="h-[110px]"
-                    style={{
-                      background: "linear-gradient(135deg, #b8863a, #8a5f2a)",
-                    }}
-                  />
-                  <div className="flex flex-1 flex-col gap-2 p-5.5">
-                    <h3 className="font-num text-[1.1rem] font-semibold text-navy-deep">
+                  <div>
+                    <span className="inline-block rounded-full bg-copper/10 px-3 py-1 font-num text-[0.72rem] font-semibold text-copper">
+                      {c.level}
+                    </span>
+                    <h3 className="mt-3 font-num text-[1.3rem] font-semibold text-navy-deep">
                       {c.title}
                     </h3>
-                    <p className="text-[0.85rem] text-gray">
-                      {c.duration} · {c.level}
-                    </p>
-                    <Link
-                      href={`/courses/${c.slug}`}
-                      className="mt-2 inline-flex items-center gap-1.5 font-num text-[0.85rem] font-semibold text-navy"
-                    >
-                      לפרטי הקורס ←
-                    </Link>
+                    <p className="mt-2 text-[0.9rem] text-gray">{c.blurb}</p>
+                    <span className="mt-4 inline-flex items-center gap-1.5 font-num text-[0.85rem] font-semibold text-navy">
+                      לפרטי הקורס המלאים ←
+                    </span>
                   </div>
-                </div>
+                  <div className="grid grid-cols-1 gap-3 self-center">
+                    {c.stats.map((s) => (
+                      <div
+                        key={s.label}
+                        className="flex items-center justify-between rounded-[var(--radius-m)] bg-cream px-4 py-3"
+                      >
+                        <span className="font-num text-[0.8rem] text-gray">
+                          {s.label}
+                        </span>
+                        <span className="font-num text-[0.85rem] font-semibold text-navy-deep">
+                          {s.value}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </Link>
               ))}
             </div>
           </div>

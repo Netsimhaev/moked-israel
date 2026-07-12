@@ -1,6 +1,7 @@
-import Link from "next/link";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { TrustBadge } from "@/components/TrustBadge";
+import { ProductListCard } from "@/components/ProductListCard";
 import { lockProducts, discountPercent } from "@/lib/locks";
 
 export default function LocksCatalogPage() {
@@ -23,63 +24,27 @@ export default function LocksCatalogPage() {
               ישירים — בלי מתווכים.
             </p>
 
+            <div className="mt-6 flex flex-wrap gap-3">
+              <TrustBadge variant="light" label="שירות ישראלי ישיר" />
+              <TrustBadge variant="light" label="אחריות מורחבת" />
+              <TrustBadge variant="light" label="התקנה ארצית מהירה" />
+            </div>
+
             <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
               {lockProducts.map((p) => (
-                <div
+                <ProductListCard
                   key={p.slug}
-                  className="flex flex-col overflow-hidden rounded-[var(--radius-l)] border border-[var(--color-line)] bg-white shadow-[var(--shadow-card)]"
-                >
-                  {p.images?.[p.colors[0]?.id] ? (
-                    // eslint-disable-next-line @next/next/no-img-element
-                    <img
-                      src={p.images[p.colors[0].id]}
-                      alt={p.name}
-                      className="h-[130px] w-full bg-white object-contain p-3"
-                    />
-                  ) : (
-                    <div
-                      className="h-[130px]"
-                      style={{
-                        background: "linear-gradient(135deg, #234a6b, #1a3552)",
-                      }}
-                    />
-                  )}
-                  <div className="flex flex-1 flex-col gap-2 p-5">
-                    <h3 className="font-num text-[1.05rem] font-semibold text-navy-deep">
-                      {p.name}
-                    </h3>
-                    <p className="flex-1 text-[0.85rem] text-gray">
-                      {p.tagline}
-                    </p>
-                    <div className="flex items-center gap-2">
-                      {p.colors.map((c) => (
-                        <span
-                          key={c.id}
-                          title={c.label}
-                          className="h-4 w-4 rounded-full border border-[var(--color-line)]"
-                          style={{ background: c.swatch }}
-                        />
-                      ))}
-                    </div>
-                    <div className="mt-1 flex items-baseline gap-2">
-                      <span className="num text-[1.15rem] font-bold text-navy-deep">
-                        ₪<bdi>{p.ourPrice.toLocaleString("he-IL")}</bdi>
-                      </span>
-                      <span className="num text-[0.85rem] text-gray line-through">
-                        ₪<bdi>{p.manufacturerPrice.toLocaleString("he-IL")}</bdi>
-                      </span>
-                      <span className="rounded-full bg-brick/10 px-2 py-0.5 font-num text-[0.7rem] font-semibold text-brick">
-                        <bdi>{discountPercent(p)}%</bdi>-
-                      </span>
-                    </div>
-                    <Link
-                      href={`/product/${p.slug}`}
-                      className="mt-2 inline-flex items-center gap-1.5 font-num text-[0.85rem] font-semibold text-navy"
-                    >
-                      לפרטי הדגם ←
-                    </Link>
-                  </div>
-                </div>
+                  href={`/product/${p.slug}`}
+                  name={p.name}
+                  tagline={p.tagline}
+                  image={p.images?.[p.colors[0]?.id]}
+                  fallbackGradient="linear-gradient(135deg, #234a6b, #1a3552)"
+                  colors={p.colors}
+                  ourPrice={p.ourPrice}
+                  manufacturerPrice={p.manufacturerPrice}
+                  discountPercent={discountPercent(p)}
+                  badge={p.catalogBadge}
+                />
               ))}
             </div>
           </div>

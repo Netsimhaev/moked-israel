@@ -1,0 +1,55 @@
+- generic [active] [ref=f3e1]:
+  - banner [ref=f3e2]:
+    - generic [ref=f3e3]:
+      - link "המוקד" [ref=f3e4] [cursor=pointer]:
+        - /url: /
+      - navigation [ref=f3e6]:
+        - link "מנעולים חכמים" [ref=f3e7] [cursor=pointer]:
+          - /url: /locks
+        - link "כספות ביתיות" [ref=f3e8] [cursor=pointer]:
+          - /url: /safes/home
+        - link "כספות נשק" [ref=f3e9] [cursor=pointer]:
+          - /url: /safes/guns
+        - link "קורסים והכשרות" [ref=f3e10] [cursor=pointer]:
+          - /url: /courses
+        - link "רובוטיקה" [ref=f3e11] [cursor=pointer]:
+          - /url: /robotics
+        - link "התקנה ואחריות" [ref=f3e12] [cursor=pointer]:
+          - /url: /#why
+      - link "התקשרו עכשיו" [ref=f3e13] [cursor=pointer]:
+        - /url: tel:+97230000000
+  - main [ref=f3e14]:
+    - generic [ref=f3e16]:
+      - paragraph [ref=f3e17]: קורסים והכשרות
+      - heading "הכשרה מטעם החברה שבאמת מתקינה" [level=1] [ref=f3e18]
+      - paragraph [ref=f3e19]: מי שמלמד אתכם הם הטכנאים שמתקינים בפועל בבתי לקוחות אמיתיים ברחבי הארץ — לא מרצים אקדמיים מנותקים מהשטח. מסלולים לטכנאים ומנעולנים שרוצים להוסיף התמחות במנעולים חכמים, ולמתעניינים חדשים בתחום.
+      - generic [ref=f3e20]:
+        - generic [ref=f3e21]: מלמדים מתקינים בפועל, לא תיאורטיקנים
+        - generic [ref=f3e23]: ליווי אישי בבית לקוח
+        - generic [ref=f3e25]: תעודת מתקין מוסמך בסיום
+      - link "מתחילים ומנעולנים מוסמכים התקנה ותכנות מנעולים חכמים הקורס נבנה מתוך צורך אמיתי בשטח — כלים פרקטיים להתקנה, תכנות ומכירה של מנעולים חכמים, ממי שמתקין בפועל בבתי לקוחות ברחבי הארץ. לפרטי הקורס המלאים ← היקף 7 פרקים · 24 שיעורים בסיום תעודת מתקין מוסמך כולל ליווי אישי בבית לקוח" [ref=f3e28] [cursor=pointer]:
+        - /url: /courses/lock-installation
+        - generic [ref=f3e29]:
+          - generic [ref=f3e30]: מתחילים ומנעולנים מוסמכים
+          - heading "התקנה ותכנות מנעולים חכמים" [level=3] [ref=f3e31]
+          - paragraph [ref=f3e32]: הקורס נבנה מתוך צורך אמיתי בשטח — כלים פרקטיים להתקנה, תכנות ומכירה של מנעולים חכמים, ממי שמתקין בפועל בבתי לקוחות ברחבי הארץ.
+          - generic [ref=f3e33]: לפרטי הקורס המלאים ←
+        - generic [ref=f3e34]:
+          - generic [ref=f3e35]:
+            - generic [ref=f3e36]: היקף
+            - generic [ref=f3e37]: 7 פרקים · 24 שיעורים
+          - generic [ref=f3e38]:
+            - generic [ref=f3e39]: בסיום
+            - generic [ref=f3e40]: תעודת מתקין מוסמך
+          - generic [ref=f3e41]:
+            - generic [ref=f3e42]: כולל
+            - generic [ref=f3e43]: ליווי אישי בבית לקוח
+  - contentinfo [ref=f3e44]:
+    - generic [ref=f3e45]:
+      - paragraph [ref=f3e46]: המוקד · מנעולים חכמים וכספות · חברה ישראלית · ישראל © 2026
+      - paragraph [ref=f3e47]:
+        - link "מדיניות פרטיות" [ref=f3e48] [cursor=pointer]:
+          - /url: /privacy
+        - link "מידע רגולטורי — כספות נשק" [ref=f3e49] [cursor=pointer]:
+          - /url: /regulation
+  - button "Open Next.js Dev Tools" [ref=f3e55] [cursor=pointer]

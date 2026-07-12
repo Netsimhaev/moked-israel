@@ -125,12 +125,16 @@ export default function RoboticsPage() {
                   (label) => (
                     <div
                       key={label}
-                      className="h-[130px] rounded-[var(--radius-m)]"
+                      className="flex h-[130px] items-end rounded-[var(--radius-m)] p-4"
                       style={{
                         background:
                           "linear-gradient(135deg, #2f5163, #17303d)",
                       }}
-                    />
+                    >
+                      <span className="font-num text-[0.88rem] font-semibold text-cream/90">
+                        {label}
+                      </span>
+                    </div>
                   ),
                 )}
               </div>

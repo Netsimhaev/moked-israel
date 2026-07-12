@@ -191,11 +191,25 @@ export default function LockInstallationCoursePage() {
               <div>
                 <div className="sticky top-24 flex flex-col gap-5">
                   <div
-                    className="h-[160px] rounded-[var(--radius-l)]"
+                    className="rounded-[var(--radius-l)] p-6 text-cream"
                     style={{
                       background: "linear-gradient(135deg, #b8863a, #8a5f2a)",
                     }}
-                  />
+                  >
+                    <p className="font-num text-[0.78rem] font-semibold tracking-[0.06em] text-cream/75 uppercase">
+                      קורס מנעולים חכמים
+                    </p>
+                    <div className="mt-4 flex flex-col gap-2.5 text-[0.9rem]">
+                      {included.map((item) => (
+                        <div key={item.label} className="flex items-baseline justify-between gap-3">
+                          <span className="text-cream/75">{item.label}</span>
+                          <span className="font-num font-semibold text-cream">
+                            {item.value}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
                   <div>
                     <span className="num text-[1.5rem] font-bold text-navy-deep">
                       ₪<bdi>{formatPrice(course.price)}</bdi>

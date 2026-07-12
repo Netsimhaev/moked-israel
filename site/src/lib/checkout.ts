@@ -22,7 +22,8 @@ export type CheckoutItem = {
   manufacturerPrice?: number; // absent for course
   shippingPrice?: number; // safes only
   installationPrice?: number; // safes only
-  image?: string;
+  image?: string; // default/fallback product photo
+  images?: Record<string, string>; // per-color photos (locks) — keyed by LockColor.id
   colors?: LockColor[]; // locks, and any future home safe with color variants
 };
 
@@ -40,6 +41,7 @@ export function getCheckoutItem(slug: string): CheckoutItem | undefined {
       price: lock.ourPrice,
       manufacturerPrice: lock.manufacturerPrice,
       image: lock.images?.[lock.colors[0]?.id ?? ""],
+      images: lock.images,
       colors: lock.colors,
     };
   }

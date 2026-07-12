@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
+import Image from "next/image";
 import type { CheckoutItem, FulfillmentMethod } from "@/lib/checkout";
 import { PICKUP_LOCATION } from "@/lib/checkout";
 import { CROSS_SELL_DISCOUNT_PERCENT } from "@/lib/crossSell";
@@ -64,6 +65,8 @@ export function CheckoutFlow({
   const installationSelected = showInstallation && includeInstallation;
   const shippingIncludedInInstallation = installationSelected;
 
+  const displayImage = (colorId && item.images?.[colorId]) ?? item.image;
+
   const crossSellPrice = crossSellItem
     ? Math.round(crossSellItem.price * (1 - CROSS_SELL_DISCOUNT_PERCENT / 100))
     : 0;
@@ -119,17 +122,31 @@ export function CheckoutFlow({
       <div className="mx-auto max-w-[1180px] px-6 sm:px-8">
         {/* ============ הירו ============ */}
         <div
-          className="rounded-[var(--radius-l)] p-8 text-cream sm:p-10"
+          className="grid gap-6 rounded-[var(--radius-l)] p-8 text-cream sm:grid-cols-[1fr_auto] sm:items-center sm:p-10"
           style={{ background: CATEGORY_GRADIENT[item.category] }}
         >
-          <p className="font-num text-[0.78rem] font-semibold tracking-[0.06em] text-cream/70 uppercase">
-            {CATEGORY_LABEL[item.category]} · תשלום מאובטח
-          </p>
-          <h1 className="mt-2 text-[1.6rem]">{item.name}</h1>
-          <p className="mt-1.5 text-[0.92rem] text-cream/80">{item.tagline}</p>
-          <p className="mt-4 num text-[1.5rem] font-bold">
-            ₪<bdi>{formatPrice(item.price)}</bdi>
-          </p>
+          <div>
+            <p className="font-num text-[0.78rem] font-semibold tracking-[0.06em] text-cream/70 uppercase">
+              {CATEGORY_LABEL[item.category]} · תשלום מאובטח
+            </p>
+            <h1 className="mt-2 text-[1.6rem]">{item.name}</h1>
+            <p className="mt-1.5 text-[0.92rem] text-cream/80">{item.tagline}</p>
+            <p className="mt-4 num text-[1.5rem] font-bold">
+              ₪<bdi>{formatPrice(item.price)}</bdi>
+            </p>
+          </div>
+          {displayImage && (
+            <div className="relative h-[140px] w-[140px] flex-none overflow-hidden rounded-[var(--radius-m)] bg-white sm:h-[160px] sm:w-[160px]">
+              <Image
+                src={displayImage}
+                alt={item.name}
+                fill
+                priority
+                sizes="160px"
+                className="object-contain p-4"
+              />
+            </div>
+          )}
         </div>
 
         <div className="mt-6 flex flex-wrap gap-2.5">
