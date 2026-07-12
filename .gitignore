@@ -2,3 +2,4 @@ site/node_modules/
 site/.next/
 site/*.tsbuildinfo
 site/.env.local
+.playwright-mcp/

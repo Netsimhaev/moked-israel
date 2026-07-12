@@ -1,6 +1,0 @@
-[     153ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
-[    4318ms] [LOG] [Fast Refresh] done in 4269ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
-[    4751ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
-[    4882ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
-[    8091ms] [WARNING] The resource http://localhost:3000/_next/static/media/87c7f5b5afcd23bd-s.p.0kf5m0zv7sxld.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3000/campaign/michal:0
-[    8092ms] [WARNING] The resource http://localhost:3000/_next/static/media/910852303c6b2343-s.p.1wvhz6ut8au_x.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3000/campaign/michal:0
