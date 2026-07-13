@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { Header } from "@/components/Header";
+import { Logo } from "@/components/Logo";
 import { Footer } from "@/components/Footer";
 import { ProductLandingHero } from "@/components/ProductLandingHero";
 import { ProductSpecSheet } from "@/components/ProductSpecSheet";
@@ -62,7 +62,21 @@ export default async function LandingPage({
 
   return (
     <>
-      <Header />
+      {/* Minimal header, no category navigation — this page is promoted via
+          paid traffic (Google/Facebook) for one specific product; a nav menu
+          to other models/categories would just leak visitors away from it.
+          Matches the same pattern already established in campaign/michal. */}
+      <header className="border-b border-[var(--color-line)] py-4">
+        <div className="mx-auto flex max-w-[1180px] items-center justify-between px-6 sm:px-8">
+          <Logo />
+          <a
+            href="tel:+97230000000"
+            className="font-num text-[0.85rem] font-semibold text-navy"
+          >
+            📞 התקשרו עכשיו
+          </a>
+        </div>
+      </header>
       <main>
         <section className="py-10 sm:py-14">
           <div className="mx-auto max-w-[1180px] px-6 sm:px-8">
