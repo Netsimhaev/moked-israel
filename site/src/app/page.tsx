@@ -18,7 +18,7 @@ export default function HomePage() {
         <section className="relative flex min-h-[440px] items-center overflow-hidden bg-navy-deep py-16 text-cream sm:min-h-[600px] sm:py-24">
           <HeroVideo />
           <div
-            className="absolute inset-0 bg-gradient-to-l from-navy-deep/95 via-navy-deep/65 to-navy-deep/25"
+            className="absolute inset-0 bg-gradient-to-b from-navy-deep/25 via-navy-deep/55 to-navy-deep/92 sm:bg-gradient-to-l sm:from-navy-deep/95 sm:via-navy-deep/65 sm:to-navy-deep/25"
             aria-hidden="true"
           />
           <div className="relative mx-auto w-full max-w-[1180px] px-6 sm:px-8">

@@ -3,3 +3,7 @@ site/.next/
 site/*.tsbuildinfo
 site/.env.local
 .playwright-mcp/
+
+/*.png
+/*.jpg
+/*.jpeg

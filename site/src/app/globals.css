@@ -48,12 +48,14 @@ body {
   font-family: var(--font-body);
 }
 
-h1,
-h2,
-h3 {
-  font-family: var(--font-display);
-  color: var(--color-navy-deep);
-  text-wrap: balance;
+@layer base {
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    color: var(--color-navy-deep);
+    text-wrap: balance;
+  }
 }
 
 .num {
