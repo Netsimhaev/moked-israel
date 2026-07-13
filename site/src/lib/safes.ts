@@ -63,6 +63,9 @@ export type GunSafeProduct = {
   // render as a click-to-enlarge thumbnail strip (SafeImageGallery.tsx).
   // Optional: falls back to the gradient placeholder when absent.
   images?: string[];
+  // AI-generated demo video slot, added later per product — see
+  // lib/landingPage.ts. Absent today for both gun safes.
+  video?: { src: string; poster: string };
   standardNote: string;
   bestFor?: string;
   problemStatement: { title: string; body: string };

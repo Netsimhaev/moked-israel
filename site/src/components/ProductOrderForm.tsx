@@ -10,6 +10,10 @@ export function ProductOrderForm({
   colors = [],
   selectedColor,
   submitLabel = "הזמינו עכשיו — כולל התקנה",
+  // Default false so the 3 existing catalog-page call sites (locks via
+  // ProductHeroGallery, home safes, gun safes) render pixel-identical to
+  // before — only the new /lp/[slug] landing pages opt in.
+  showUpdatesOptIn = false,
 }: {
   productSlug: string;
   productName: string;
@@ -20,6 +24,7 @@ export function ProductOrderForm({
   // rendering its own picker and just uses this value on submit.
   selectedColor?: LockColor;
   submitLabel?: string;
+  showUpdatesOptIn?: boolean;
 }) {
   const [internalColor, setInternalColor] = useState(colors[0]);
   const color = selectedColor ?? internalColor;
@@ -46,7 +51,6 @@ export function ProductOrderForm({
       });
       if (!res.ok) throw new Error("failed");
       setStatus("sent");
-      e.currentTarget.reset();
     } catch {
       setStatus("error");
     }
@@ -105,6 +109,18 @@ export function ProductOrderForm({
         placeholder="לדוגמה: רעננה"
         className="mb-5 w-full rounded-[var(--radius-s)] border border-[var(--color-line)] bg-cream px-3.5 py-2.5 text-[0.92rem] outline-none focus:border-navy focus:outline focus:outline-2 focus:outline-navy"
       />
+
+      {showUpdatesOptIn && (
+        <label className="mb-5 flex cursor-pointer items-start gap-2.5 text-[0.85rem] text-charcoal">
+          <input
+            type="checkbox"
+            name="updatesOptIn"
+            defaultChecked={false}
+            className="mt-0.5 h-4 w-4 flex-none"
+          />
+          עדכנו אותי במבצעים והנחות על {productName}
+        </label>
+      )}
 
       <button
         type="submit"

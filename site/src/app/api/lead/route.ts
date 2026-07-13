@@ -53,6 +53,11 @@ export async function POST(request: Request) {
     role: sanitizeField(raw.role),
     scope: sanitizeField(raw.scope),
     source: sanitizeField(raw.source) ?? "unknown",
+    // "עדכנו אותי במבצעים והנחות" opt-in, added 2026-07-13 for the /lp/[slug]
+    // landing pages' lead form. A native checkbox omits the field entirely
+    // from FormData when unchecked — `Boolean(raw.updatesOptIn)` is falsy in
+    // that case and truthy for the "on" string sent when checked.
+    updatesOptIn: Boolean(raw.updatesOptIn),
     at: new Date().toISOString(),
   };
 

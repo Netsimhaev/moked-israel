@@ -24,7 +24,6 @@ export function QuoteForm({ source }: { source: string }) {
       });
       if (!res.ok) throw new Error("failed");
       setStatus("sent");
-      e.currentTarget.reset();
     } catch {
       setStatus("error");
     }

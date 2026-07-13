@@ -1,7 +1,11 @@
 import Link from "next/link";
 import { lockProducts, discountPercent, type LockFeatures } from "@/lib/locks";
 
-const featureRows: { key: keyof LockFeatures; label: string }[] = [
+// Exported so lib/landingPage.ts can reuse the exact same labels when
+// deriving a single-product spec row from these boolean flags — keeps
+// wording consistent between this cross-model table and the richer
+// per-product /lp/[slug] landing page.
+export const featureRows: { key: keyof LockFeatures; label: string }[] = [
   { key: "faceId", label: "זיהוי פנים" },
   { key: "palmId", label: "זיהוי כף יד" },
   { key: "heightAdjustableScanner", label: "סורק מתכוונן לגובה המשתמש" },

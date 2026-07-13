@@ -31,7 +31,6 @@ export function LeadForm({
       });
       if (!res.ok) throw new Error("failed");
       setStatus("sent");
-      e.currentTarget.reset();
     } catch {
       setStatus("error");
     }

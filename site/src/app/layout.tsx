@@ -24,6 +24,7 @@ const rubik = Rubik({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"),
   title: "המוקד — מנעולים חכמים וכספות, שירות ישראלי ישיר",
   description:
     "מנעולים חכמים וכספות שנבחרו ונבדקו על ידינו, עם התקנה ארצית ואחריות שנתיים על המוצר ועל ההתקנה — הכל תחת קורת גג אחת.",

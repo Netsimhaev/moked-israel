@@ -129,7 +129,7 @@ export function CheckoutFlow({
             <p className="font-num text-[0.78rem] font-semibold tracking-[0.06em] text-cream/70 uppercase">
               {CATEGORY_LABEL[item.category]} · תשלום מאובטח
             </p>
-            <h1 className="mt-2 text-[1.6rem]">{item.name}</h1>
+            <h1 className="mt-2 text-[1.6rem] text-cream">{item.name}</h1>
             <p className="mt-1.5 text-[0.92rem] text-cream/80">{item.tagline}</p>
             <p className="mt-4 num text-[1.5rem] font-bold">
               ₪<bdi>{formatPrice(item.price)}</bdi>

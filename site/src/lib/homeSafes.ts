@@ -86,6 +86,9 @@ export type HomeSafeProduct = {
   // "installation" concept. Rendered via SafeImageGallery.tsx (shared with
   // gun safes, not lock-specific).
   images?: string[];
+  // AI-generated demo video slot, added later per product — see
+  // lib/landingPage.ts. Absent today for all 4 home safes.
+  video?: { src: string; poster: string };
   bestFor?: string;
   problemStatement: { title: string; body: string };
   faq: { question: string; answer: string }[];

@@ -100,3 +100,41 @@ export async function POST(request: Request) {
 - webhook בפועל מול `NEXT_PUBLIC_SITE_URL` אמיתי (לא localhost) — Cardcom לא הצליח לקרוא ל-callback במהלך הבדיקה הזו כי לא הייתה כתובת ציבורית.
 - צורת `TranzactionInfo` בעסקה **שהצליחה בפועל** (רק "ממתין" נבדק).
 - `CARDCOM_DRY_RUN` **עדיין `true`** — טרם בוצעה עסקה מלאה דרך זרימת ה-checkout באתר עצמו, רק בדיקת API מבודדת.
+
+## 2026-07-13 — ביקורת אבטחה מלאה (יזומה על ידי המשתמש, לא שגרתית): בדיקת קוד + בדיקות LIVE מול `localhost:3000`
+
+> `.env.local` מכיל כעת credentials אמיתיים (terminal 154264) עם `CARDCOM_DRY_RUN=false`. כל הבדיקות בוצעו ללא הזנת פרטי כרטיס אמיתיים בפועל — עצירה מפורשת לפני מסך הסליקה של Cardcom, בהתאם להנחיה. סבב זה כלל בפעם הראשונה בדיקת **קצה-לקצה דרך קוד האפליקציה עצמו** (לא סקריפט מבודד כמו בסבב הקודם).
+
+### ✅ אושר בטוח (קוד + LIVE)
+
+**1. אין PAN/פרטי כרטיס שנוגעים בשרת שלנו.** `CheckoutFlow.tsx` לא כולל אף שדה כרטיס — רק שם/טלפון/אימייל/כתובת. בדיקה חיה מלאה (POST אמיתי ל-`/api/checkout` דרך קוד האפליקציה עצמו, לא סקריפט חיצוני, עם נתוני QA מזוהים בבירור כבדיקה) החזירה בפועל `url` תקין בדומיין `secure.cardcom.solutions` (Cardcom hosted page) — לא נכנסתי לעמוד עצמו ולא הוזנו פרטי תשלום. זו הפעם הראשונה שנתיב הקוד המלא (form → `/api/checkout` → `lib/cardcom.ts` → Cardcom אמיתי) אומת קצה-לקצה, לא רק קריאת API מבודדת כמו בסבב הקודם.
+
+**2. תקינות מחיר בצד שרת — אושר.** גם קריאת קוד וגם grep מלא אישרו: `raw.amount`/כל ערך "amount" מהלקוח **אף פעם לא נקרא** בקוד — המחיר תמיד מחושב מ-`getCheckoutItem`. בדיקה חיה: שליחת `"amount":1` מהלקוח לא השפיעה על הזרימה (לא התקבלה כערך חלופי, פשוט לא נקראה כלל). ניסיון תרמית cross-sell (שליחת `crossSellSlug` שלא תואם למיפוי האמיתי) נדחה בפועל עם `400 {"error":"invalid cross-sell pairing"}`.
+
+**3. מודל אמון ה-webhook — אושר.** `/api/checkout/callback` תמיד שולח שאילתת אימות מחדש ל-Cardcom (`getLowProfileResult`) ומתעלם לחלוטין משדות ה-payload הגולמי (`ResponseCode`/`TranzactionInfo` שנשלחו בבקשה עצמה). בדיקה חיה: POST מזויף עם `LowProfileId` בדוי + payload שטוען "הצלחה" החזיר `200` (מכוון — מונע retry storm מ-Cardcom) אבל **לא** הפעיל את נתיב המימוש (`[checkout:completed]`) כי ה-re-query האמיתי מול Cardcom נכשל עבור ID לא קיים. אימות אנטי-spoofing עובד כמתוכנן. Idempotency (`processedLowProfileIds`) נבדק **לפני** קריאת ה-re-query, כך שקריאות חוזרות לא מייצרות עומס API מיותר.
+
+**4. Rate limiting — אושר חי.** גם `/api/checkout` (5/דקה) וגם `/api/checkout/callback` (30/דקה) וגם `/api/lead` (5/דקה) הפעילו בפועל `429` אחרי חריגה מהסף, נבדק ב-curl ישיר.
+
+**5. ולידציית קלט — אושר חי.** `sanitizeField` דוחה בפועל: non-string (מערך/אובייקט), שדות ריקים, שדות מעל 300 תווים. Regex לטלפון/אימייל דוחה פורמטים לא תקינים. payloads של הזרקה (`<script>alert(1)</script>`, `' OR 1=1--`, `DROP TABLE`, `<img onerror=...>`) התקבלו רק כמחרוזות טקסט חופשי רגילות (בשדות שם/כתובת) — אין להם וקטור מימוש: אין `dangerouslySetInnerHTML` בכל ה-repo, אין `eval`/`new Function`, אין מסד נתונים (אין SQLi אפשרי), React מבצע escaping אוטומטי לכל תוכן מוצג. **אין וקטור XSS/SQLi מנוצל בפועל כיום.**
+
+**6. היגיינת סודות — אושר מקיף.** grep מלא של `site/src` (תבניות `api[_-]?key|secret|password|Bearer` וכו') לא מצא אף סוד hardcoded — רק `process.env.*`. `lib/cardcom.ts` (מכיל את שלושת ה-credentials הרגישים) מיובא **אך ורק** על ידי שני קבצי `route.ts` בצד שרת — אומת ב-grep שאין שום "use client" component שמייבא אותו, כלומר אין נתיב לדליפה ל-client bundle. `NEXT_PUBLIC_SITE_URL` הוא ה-`NEXT_PUBLIC_*` היחיד בכל הקוד ואינו רגיש (כתובת בסיס פומבית). `.env.local` **אינו** tracked ב-git (`git ls-files` ריק), **אינו** מופיע בהיסטוריית git בכלל (`git log --all` על הקובץ ריק), ו-`.gitignore` מכיל `.env*` כראוי. `.env.local.example` מכיל placeholders בלבד. מספר "154264" (terminal number, לא סוד עצמו) מופיע רק בהערות תיעוד/memory, לא credential בפועל.
+
+**7. עמוד ההצלחה (`/checkout/[slug]/success`) — אין IDOR.** נבדק קוד: העמוד לא קורא כלל את פרמטר ה-`order` מה-query string ולא שולף/מציג נתוני הזמנה/PII לפי מזהה — מציג רק מידע סטטי מה-slug של המוצר. אין סיכון חשיפת PII של לקוח אחר דרך ניחוש/שיתוף UUID.
+
+### ⚠️ סיכונים/פערים (חלקם אושרו LIVE הסבב הזה, מחמירים סטטוס מ"תיאורטי" ל"מוכח")
+
+**1. `getClientIp` ניתן לעקיפה טריוויאלית — הוכח LIVE, לא רק תיאורטי יותר.** הפונקציה קוראת רק את הערך הראשון ב-`x-forwarded-for` (`.split(",")[0]`) בלי שום אימות מספר hops מהימנים. בדיקה חיה הוכיחה: אחרי הפעלת ה-`429` בפועל על `/api/lead`, שינוי כותרת `X-Forwarded-For` לערך שרירותי אחר באותה בקשה הבאה איפס את המונה מיידית וקיבל `200` — עקיפה מלאה של rate limiting בעלות אפסית. בסביבת dev מקומית אין proxy כלל אז הלקוח שולט לגמרי בכותרת. **לפני production חובה לאמת את התנהגות Vercel בפועל** — אם Vercel **מוסיף** (append) את ה-IP האמיתי בסוף הרשימה במקום להחליף אותה לגמרי, אז לקיחת אינדקס `[0]` (כפי שהקוד עושה) תשאיר את אותה חולשה חיה גם ב-production. המלצה: לאמת מול תיעוד Vercel בפועל אחרי הפריסה הראשונה, ולשקול להשתמש בכותרת שה-platform מבטיח שאינה ניתנת לזיוף (אם קיימת), ולהתייחס ל-rate limiting הנוכחי כאמצעי עזר/בקרת עלויות ולא כגבול אבטחה קשיח.
+
+**2. אין הגנת CSRF — עדיין פתוח, אושר LIVE (לא חדש).** בדיקה חיה: POST עם כותרת `Origin: https://evil-attacker.example` התקבל ועובד רגיל (`200`) — אין בדיקת Origin/Referer בשום מקום. מאחר ואין session/cookie-based auth בזרימה הזו (checkout פומבי, לא פעולה מאומתת), האימפקט הקלאסי של CSRF (פעולה "בשם" משתמש מחובר) לא רלוונטי — אבל זה עדיין מאפשר שליחת בקשות מזויפות בהמוניהן מכל מקור (לידים מזויפים, ויצירת sessions אמיתיים מול Cardcom האמיתי ללא הגבלה מלבד ה-rate limiter הניתן לעקיפה בסעיף 1).
+
+**3. אין שום security headers מוגדרים — אושר LIVE.** `curl -I` על עמוד הבית לא הראה `Content-Security-Policy`, `X-Frame-Options`/`frame-ancestors`, `X-Content-Type-Options`, `Referrer-Policy`, או `Permissions-Policy`. `next.config.ts` הוא ברירת מחדל לגמרי — אין `headers()`, אין `poweredByHeader: false` (התגובה חושפת `X-Powered-By: Next.js`). **חשוב במיוחד:** עמוד ה-checkout שלנו עצמו יכול (במצב `CARDCOM_EMBED_MODE=iframe`) להטמיע iframe של Cardcom — אבל בלי `X-Frame-Options`/CSP `frame-ancestors` על העמודים **שלנו**, גם עמוד ה-checkout שלנו עצמו יכול תיאורטית להיות מוטמע ב-iframe זדוני באתר אחר (clickjacking נגד זרימת הרכישה). HSTS כנראה יסופק אוטומטית על ידי Vercel ב-production (לא ניתן לאימות מ-localhost) — זהו סעיף קיים ולא חדש, ראה למטה.
+
+**4. PII של לקוחות נכתב בטקסט גלוי ל-console בכל checkout/ליד.** `[checkout:created]`, `[checkout:completed]`, ו-`[lead]` כותבים שם/טלפון/אימייל/כתובת מלאים ל-log. זה אותו דפוס stub-logging שתועד קודם, אבל משמעותי יותר עכשיו שיש credentials אמיתיים וזרימת תשלום אמיתית — ב-Vercel זה הופך לחלק ממערכת ה-logs של הפלטפורמה (גישה צריכה להיות מוגבלת לאנשי צוות מורשים בלבד), ורלוונטי לחוק הגנת הפרטיות (ראה `legal-notes.md`). ה-TODO הקיים להעביר ל-CRM אמיתי הופך דחוף יותר.
+
+**5. `npm audit`: פגיעות moderate אחת** — PostCSS < 8.5.10 (GHSA-qx2v-qp2m-jg93, XSS דרך `</style>` לא escaped בפלט stringify), תלות טרנזיטיבית בתוך `node_modules/next/node_modules/postcss` (גרסת postcss הפנימית שחבויה בתוך next עצמו, לא תלות ישירה של הפרויקט). ניצול בפועל לא סביר כאן — האתר לא הופך קלט משתמש למחרוזת CSS אף פעם. Fix דורש downgrade שובר-תאימות ל-next (`npm audit fix --force`) — לא מומלץ לכפות; יש לעקוב אחרי עדכון עתידי תואם.
+
+### ❌ חובה לתקן לפני כסף אמיתי (עדכון סטטוס)
+
+1. **עקיפת rate limiting דרך `X-Forwarded-For` (סעיף ⚠️1 למעלה)** — מומלץ להעלות סטטוס מ"מגבלה ידועה של in-memory storage" ל**חוסם מפורש לפני production**, כי הסבב הזה הוכיח בפועל שהעקיפה לא תלויה בכלל ב-distributed-storage — היא ברמת parsing של כותרת HTTP יחידה, ותיתכן גם בפריסה אמיתית ב-Vercel אם ה-header behavior לא מאומת כמצופה.
+2. הפריטים הקיימים ללא שינוי (לא נבדקו מחדש כי הם עדיין לא רלוונטיים לבדיקה מקומית): webhook קצה-לקצה מול `NEXT_PUBLIC_SITE_URL` ציבורי אמיתי; צורת `TranzactionInfo` בעסקה **שהצליחה בפועל** (עדיין רק pending + יצירת session אומתו, לא תשלום שהושלם בפועל); `pendingOrders`/`processedLowProfileIds` עדיין in-memory (לא נמצאה בעיה חמורה יותר מהמתועד — אין דרך שנבדקה "לזהם" את ה-Map מבחוץ).
+3. אין CSRF protection ואין security headers (סעיפים ⚠️2, ⚠️3) — לא חוסמים מוחלטים כרגע (אין session-based auth לנצל, ואין עדיין נזק כספי ישיר אפשרי מעבר לספאם/עומס), אבל מומלץ בחום לסגור לפני חשיפה פומבית עם domain אמיתי.

@@ -54,6 +54,17 @@ export type LockProduct = {
   // gradient placeholder in product/[slug]/page.tsx.
   images?: Record<string, string>;
   installPhotos?: string[];
+  // Optional single-product technical spec sheet (distinct from the boolean
+  // features{} flags above, which only drive ModelComparisonTable's
+  // cross-model ✓/— grid) — for the richer /lp/[slug] landing page's
+  // ProductSpecSheet. Absent today for all 4 locks; backfill with real
+  // sourced values (battery voltage/capacity, response time, body material —
+  // several already exist as unstructured prose in highlights/description
+  // and just need lifting into rows, not inventing).
+  specs?: { label: string; value: string }[];
+  // AI-generated demo video slot, added later per product — see
+  // lib/landingPage.ts. Absent today for all 4 locks.
+  video?: { src: string; poster: string };
   catalogBadge?: string;
   bestFor?: string; // only when a product needs an honest "who this isn't for" note (see ALFA)
   problemStatement: { title: string; body: string };
@@ -110,6 +121,7 @@ export const lockProducts: LockProduct[] = [
       alarm: true,
       heightAdjustableScanner: true, // per explicit user confirmation 2026-07-08 — not in Techom catalog PDF text
     },
+    catalogBadge: "נבחר במיוחד עבור הדלת הישראלית",
     bestFor:
       "ALFA הוא הדגם המתקדם ביותר שלנו, ובעל יתרון ייחודי: הוא הדגם היחיד בקטלוג שלנו עם סורק זיהוי פנים וכף יד שמתכוונן פיזית לגובה של כל משתמש — לזיהוי מדויק ומהיר יותר, גם לילדים וגם למבוגרים. Model T כולל גם הוא זיהוי פנים וכף יד, אך ללא מנגנון הכיוונון לגובה. בנוסף, ל-ALFA אין הגבלה על מספר המשתמשים (מול עד 150 ב-Model T). לכן ALFA מתאים במיוחד למי שרוצה את הדיוק והנוחות המקסימליים בזיהוי הביומטרי, וכן לבתים גדולים, מבנים משותפים או עסקים קטנים שצריכים גישה למספר בלתי מוגבל של אנשים.",
     problemStatement: {
@@ -225,6 +237,7 @@ export const lockProducts: LockProduct[] = [
       alarm: true,
       heightAdjustableScanner: false, // ALFA-only per explicit user confirmation, 2026-07-08 — not confirmed for Model T
     },
+    catalogBadge: "נבחר במיוחד עבור הדלת הישראלית",
     problemStatement: {
       title: "מה קורה כשנגמרת הסוללה באמצע הלילה?",
       body: "כל מנעול \"חכם\" נשמע נהדר — עד שנגמרת הסוללה או נופל האינטרנט בדיוק כשאתם רוצים להיכנס הביתה. Model T נבנה בדיוק בשביל הרגע הזה: שבעה אמצעי גישה עצמאיים ומפתחות פיזיים לגיבוי, כך שתמיד יש יותר מדרך אחת להיכנס.",
@@ -433,6 +446,7 @@ export const lockProducts: LockProduct[] = [
       alarm: true, // "אזעקה נגד פריצה" confirmed per Techom catalog PDF, 2026-07-08
       heightAdjustableScanner: false, // ALFA-only per explicit user confirmation, 2026-07-08; not applicable — Smart has no face/palm scanner at all
     },
+    catalogBadge: "נבחר במיוחד עבור הדלת הישראלית",
     bestFor:
       "Smart הוא דגם הכניסה שלנו, אבל הוא לא מקוצר בשיטות הגישה — יש לו טביעת אצבע, קוד, צ'יפ, אפליקציה ואזעקה מובנית נגד פריצה, בדיוק כמו הדגמים היקרים יותר. ההבדל האמיתי: אין לו מצלמה, מסך פנימי, זיהוי פנים או זיהוי כף יד. אם רק חשוב לכם ראייה מי בדלת — Smart Plus מוסיף מצלמה ומסך. אם חשוב לכם גם זיהוי ביומטרי מתקדם — Model T או ALFA מתאימים יותר. אם אתם רוצים כניסה חכמה אמיתית במחיר הכי נגיש בקטלוג — Smart נותן את זה במלואו.",
     problemStatement: {

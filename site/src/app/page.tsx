@@ -82,7 +82,7 @@ export default function HomePage() {
                   usp="בטיחות משפחתית, לא ציוד טקטי — עומדות בתקן, מותקנות בבית שלכם תוך ימים ספורים."
                   href="/safes/guns"
                   linkLabel="לכספות הנשק שלנו"
-                  image="/images/safes/guns/model-f/hero.jpg"
+                  image="/images/safes/guns/category-hero.jpg"
                 />
               </div>
               <div id="courses">
@@ -92,6 +92,7 @@ export default function HomePage() {
                   usp="הכשרה מטעם החברה שבאמת מתקינה — לימודי התקנה ותכנות מנעולים חכמים ממי שעושה את זה בשטח."
                   href="/courses"
                   linkLabel="לפרטי הקורסים"
+                  image="/images/courses/category-hero.jpg"
                 />
               </div>
               <div id="robotics">
@@ -101,6 +102,7 @@ export default function HomePage() {
                   usp="רובוטים תעשייתיים ודמויי-אדם, מנוהלים בפלטפורמת בקרה שפיתחנו בעצמנו בישראל."
                   href="/robotics"
                   linkLabel="בקשו הצעת מחיר"
+                  image="/images/robotics/category-hero.jpg"
                 />
               </div>
             </div>
