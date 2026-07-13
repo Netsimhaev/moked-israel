@@ -69,7 +69,7 @@ export default function MichalCampaignPage() {
             <b className="block font-num text-navy-deep">
               כתובת אחת לכל שאלה
             </b>
-            אחריות מורחבת ומוקד שירות זמין — גם אחרי הרכישה.
+            אחריות שנתיים על המוצר ועל ההתקנה, ומוקד שירות זמין — גם אחרי הרכישה.
           </div>
         </div>
       </section>

@@ -2,7 +2,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/Button";
 import { TrustBadge } from "@/components/TrustBadge";
-import { NightHero } from "@/components/NightHero";
+import { HeroVideo } from "@/components/HeroVideo";
 import { CategoryCard } from "@/components/CategoryCard";
 import { DiffItem, IsraelFlagIcon } from "@/components/DiffItem";
 import { Testimonial } from "@/components/Testimonial";
@@ -15,9 +15,14 @@ export default function HomePage() {
       <Header />
       <main>
         {/* ================= HERO ================= */}
-        <section className="relative overflow-hidden bg-navy-deep py-16 text-cream sm:py-24">
-          <div className="mx-auto grid max-w-[1180px] items-center gap-10 px-6 sm:grid-cols-[1.05fr_0.95fr] sm:gap-12 sm:px-8">
-            <div>
+        <section className="relative flex min-h-[440px] items-center overflow-hidden bg-navy-deep py-16 text-cream sm:min-h-[600px] sm:py-24">
+          <HeroVideo />
+          <div
+            className="absolute inset-0 bg-gradient-to-l from-navy-deep/95 via-navy-deep/65 to-navy-deep/25"
+            aria-hidden="true"
+          />
+          <div className="relative mx-auto w-full max-w-[1180px] px-6 sm:px-8">
+            <div className="sm:max-w-[600px]">
               <p className="mb-4 font-num text-[0.78rem] tracking-[0.1em] text-gold uppercase">
                 המוקד · אבטחה חכמה לבית הישראלי
               </p>
@@ -27,8 +32,8 @@ export default function HomePage() {
               </h1>
               <p className="mt-4 max-w-[46ch] text-[1.05rem] text-cream/78">
                 מנעולים חכמים וכספות שנבחרו ונבדקו על ידינו, עם התקנה ארצית
-                ואחריות מורחבת — בלי לרדוף אחרי יבואן, מתקין, ומוקד שירות
-                בנפרד.
+                ואחריות שנתיים על המוצר ועל ההתקנה — בלי לרדוף אחרי יבואן,
+                מתקין, ומוקד שירות בנפרד.
               </p>
               <div className="mt-8 flex flex-wrap gap-3.5">
                 <Button variant="primary" href="#leads">
@@ -40,11 +45,10 @@ export default function HomePage() {
               </div>
               <div className="mt-9 flex flex-wrap gap-3">
                 <TrustBadge label="שירות ישראלי ישיר" />
-                <TrustBadge label="אחריות מורחבת" />
+                <TrustBadge label="אחריות שנתיים" />
                 <TrustBadge label="התקנה ארצית מהירה" />
               </div>
             </div>
-            <NightHero />
           </div>
         </section>
 

@@ -69,7 +69,7 @@ export default async function GunSafePage({
                     manufacturerPrice={product.manufacturerPrice}
                     ourPrice={product.ourPrice}
                     discountPercent={safeDiscountPercent(product)}
-                    note="מחיר מחירון היצרן (Techom) מול מחיר המוקד — מחיר הכספת בלבד, משלוח והתקנה בנפרד"
+                    note="מחיר מחירון היצרן מול מחיר המוקד — מחיר הכספת בלבד, משלוח והתקנה בנפרד"
                   />
                   <div className="mt-3 flex flex-wrap gap-2 text-[0.82rem]">
                     <span className="rounded-full bg-cream px-3 py-1.5 text-charcoal">

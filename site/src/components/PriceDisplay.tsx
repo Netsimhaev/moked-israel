@@ -6,7 +6,7 @@ export function PriceDisplay({
   manufacturerPrice,
   ourPrice,
   discountPercent,
-  note = "מחיר מחירון היצרן (Techom) מול מחיר המוקד — כולל התקנה",
+  note = "מחיר מחירון היצרן מול מחיר המוקד — כולל התקנה",
 }: {
   manufacturerPrice: number;
   ourPrice: number;

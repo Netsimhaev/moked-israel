@@ -103,7 +103,7 @@ export function ProductHeroGallery({
             manufacturerPrice={product.manufacturerPrice}
             ourPrice={product.ourPrice}
             discountPercent={discountPercent}
-            note="מחיר מחירון היצרן (Techom) מול מחיר המוקד — המחיר כולל התקנה מקצועית, הדרכת שימוש, ואחריות יבואן רשמי"
+            note="מחיר מחירון היצרן מול מחיר המוקד — המחיר כולל התקנה מקצועית, הדרכת שימוש, ואחריות יבואן רשמי"
           />
         </div>
 

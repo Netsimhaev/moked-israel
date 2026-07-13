@@ -26,7 +26,7 @@ export default function LocksCatalogPage() {
 
             <div className="mt-6 flex flex-wrap gap-3">
               <TrustBadge variant="light" label="שירות ישראלי ישיר" />
-              <TrustBadge variant="light" label="אחריות מורחבת" />
+              <TrustBadge variant="light" label="אחריות שנתיים על המוצר וההתקנה" />
               <TrustBadge variant="light" label="התקנה ארצית מהירה" />
             </div>
 

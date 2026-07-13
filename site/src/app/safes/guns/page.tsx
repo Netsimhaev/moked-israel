@@ -27,7 +27,7 @@ export default function GunSafesCatalogPage() {
             <div className="mt-6 flex flex-wrap gap-3">
               <TrustBadge variant="light" label="עומדות בתקן העדכני" />
               <TrustBadge variant="light" label="שירות ישראלי ישיר" />
-              <TrustBadge variant="light" label="אחריות מורחבת" />
+              <TrustBadge variant="light" label="אחריות שנתיים על המוצר וההתקנה" />
             </div>
 
             <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
