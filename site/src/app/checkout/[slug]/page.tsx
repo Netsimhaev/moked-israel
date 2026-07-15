@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { Header } from "@/components/Header";
+import { MinimalHeader } from "@/components/MinimalHeader";
 import { Footer } from "@/components/Footer";
 import { CheckoutFlow } from "@/components/checkout/CheckoutFlow";
 import { getCheckoutItem } from "@/lib/checkout";
@@ -23,7 +23,9 @@ export default async function CheckoutPage({
 
   return (
     <>
-      <Header />
+      {/* No category nav here — a checkout page must not offer an exit
+          ramp to browse other products mid-payment. */}
+      <MinimalHeader />
       <main>
         <CheckoutFlow
           item={item}

@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { Logo } from "@/components/Logo";
+import { MinimalHeader } from "@/components/MinimalHeader";
 import { Footer } from "@/components/Footer";
 import { ProductLandingHero } from "@/components/ProductLandingHero";
 import { ProductSpecSheet } from "@/components/ProductSpecSheet";
 import { ProductChatWidget } from "@/components/ProductChatWidget";
+import { ProductVideoPlayer } from "@/components/ProductVideoPlayer";
 import { ProductOrderForm } from "@/components/ProductOrderForm";
 import { ProductFAQ } from "@/components/ProductFAQ";
 import {
@@ -62,21 +63,7 @@ export default async function LandingPage({
 
   return (
     <>
-      {/* Minimal header, no category navigation — this page is promoted via
-          paid traffic (Google/Facebook) for one specific product; a nav menu
-          to other models/categories would just leak visitors away from it.
-          Matches the same pattern already established in campaign/michal. */}
-      <header className="border-b border-[var(--color-line)] py-4">
-        <div className="mx-auto flex max-w-[1180px] items-center justify-between px-6 sm:px-8">
-          <Logo />
-          <a
-            href="tel:+97230000000"
-            className="font-num text-[0.85rem] font-semibold text-navy"
-          >
-            📞 התקשרו עכשיו
-          </a>
-        </div>
-      </header>
+      <MinimalHeader />
       <main>
         <section className="py-10 sm:py-14">
           <div className="mx-auto max-w-[1180px] px-6 sm:px-8">
@@ -88,6 +75,22 @@ export default async function LandingPage({
                   מי מייצר, מי מתקין
                 </h3>
                 <p className="mt-2 text-[0.88rem] text-gray">{trustCopy}</p>
+              </div>
+            )}
+
+            {product.demoVideo && (
+              <div className="mt-14 border-t border-[var(--color-line)] pt-10">
+                <h2 className="text-[1.3rem]">{product.demoVideo.title}</h2>
+                <p className="mt-2 max-w-[60ch] text-[0.9rem] text-gray">
+                  צפו בכספת מודל E בפעולה אצל הצוות שלנו — שלוש דרכי הפתיחה,
+                  עובי הפלדה, והעיגון לקיר, בדיוק כפי שהם נראים במציאות.
+                </p>
+                <div className="mx-auto mt-6 aspect-[9/16] w-full max-w-[420px] overflow-hidden rounded-[var(--radius-l)] border border-[var(--color-line)] bg-black">
+                  <ProductVideoPlayer
+                    src={product.demoVideo.src}
+                    poster={product.demoVideo.poster}
+                  />
+                </div>
               </div>
             )}
 
@@ -164,9 +167,11 @@ export default async function LandingPage({
               </div>
             )}
 
-            <div className="mt-12 max-w-[70ch]">
-              <ProductChatWidget slug={product.slug} productName={product.name} />
-            </div>
+            {/* Floating trigger, not inline content — renders itself as a
+                fixed bottom-left button/panel that stays visible through
+                scroll (see ProductChatWidget). Placement in the tree here
+                doesn't affect where it appears on screen. */}
+            <ProductChatWidget slug={product.slug} productName={product.name} />
 
             <div id="lead" className="mt-12 scroll-mt-24 max-w-[560px]">
               <h2 className="text-[1.3rem]">

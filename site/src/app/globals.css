@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 :root {
   --color-navy: #1e3a56;
@@ -88,4 +89,24 @@ bdi {
     animation: none !important;
     opacity: 1 !important;
   }
+}
+
+/* Maps @tailwindcss/typography's `prose` output onto this project's
+   existing brand tokens instead of Tailwind's gray defaults — used for
+   MDX blog-article bodies. */
+.prose-brand {
+  --tw-prose-body: var(--color-charcoal);
+  --tw-prose-headings: var(--color-navy-deep);
+  --tw-prose-lead: var(--color-gray);
+  --tw-prose-links: var(--color-navy);
+  --tw-prose-bold: var(--color-navy-deep);
+  --tw-prose-counters: var(--color-gray);
+  --tw-prose-bullets: var(--color-gray);
+  --tw-prose-hr: var(--color-line);
+  --tw-prose-quotes: var(--color-navy-deep);
+  --tw-prose-quote-borders: var(--color-gold);
+  --tw-prose-captions: var(--color-gray);
+  --tw-prose-code: var(--color-charcoal);
+  --tw-prose-th-borders: var(--color-line);
+  --tw-prose-td-borders: var(--color-line);
 }

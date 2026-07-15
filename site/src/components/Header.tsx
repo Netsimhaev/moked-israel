@@ -12,6 +12,7 @@ export function Header() {
           <Link href="/safes/guns">כספות נשק</Link>
           <Link href="/courses">קורסים והכשרות</Link>
           <Link href="/robotics">רובוטיקה</Link>
+          <Link href="/blog">בלוג</Link>
           <Link href="/#why">התקנה ואחריות</Link>
         </nav>
         <a

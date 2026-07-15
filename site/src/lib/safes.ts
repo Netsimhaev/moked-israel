@@ -66,6 +66,10 @@ export type GunSafeProduct = {
   // AI-generated demo video slot, added later per product — see
   // lib/landingPage.ts. Absent today for both gun safes.
   video?: { src: string; poster: string };
+  // Real on-site product demo video, shown as its own section on /lp/[slug]
+  // (not the hero gallery — see `video` above for that slot). Added for
+  // model-e only today.
+  demoVideo?: { src: string; poster: string; title: string };
   standardNote: string;
   bestFor?: string;
   problemStatement: { title: string; body: string };
@@ -170,6 +174,11 @@ export const gunSafeProducts: GunSafeProduct[] = [
       "/images/safes/guns/model-e/angle-3.webp",
       "/images/safes/guns/model-e/angle-4.webp",
     ],
+    demoVideo: {
+      src: "/videos/model-e-demo.mp4",
+      poster: "/images/safes/guns/model-e/video-poster.jpg",
+      title: "הכירו את הכספת הדיגיטלית לנשק שלכם",
+    },
     highlights: [
       "3 דרכי פתיחה: טביעת אצבע לגישה מהירה, קודן דיגיטלי, ומפתח מכני לגיבוי מלא",
       "פועלת על 4 סוללות AA רגילות — ואם הסוללה נגמרת, המפתח המכני תמיד עובד",

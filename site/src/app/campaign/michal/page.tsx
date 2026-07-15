@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Logo } from "@/components/Logo";
+import { MinimalHeader } from "@/components/MinimalHeader";
 import { Button } from "@/components/Button";
 import { LeadForm } from "@/components/LeadForm";
 
@@ -8,17 +8,7 @@ import { LeadForm } from "@/components/LeadForm";
 export default function MichalCampaignPage() {
   return (
     <main>
-      <header className="border-b border-[var(--color-line)] py-4">
-        <div className="mx-auto flex max-w-[900px] items-center justify-between px-6">
-          <Logo />
-          <a
-            href="tel:+97230000000"
-            className="font-num text-[0.85rem] font-semibold text-navy"
-          >
-            📞 התקשרו עכשיו
-          </a>
-        </div>
-      </header>
+      <MinimalHeader maxWidth="900px" />
 
       <section className="bg-cream py-14 text-center sm:py-16">
         <div className="mx-auto max-w-[700px] px-6">

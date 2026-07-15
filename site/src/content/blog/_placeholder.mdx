@@ -1,0 +1,24 @@
+---
+title: "placeholder — do not delete"
+slug: "_placeholder"
+publishDate: "2026-01-01"
+category: news
+excerpt: "placeholder"
+heroImage: "/images/robotics/category-hero.jpg"
+heroImageAlt: "placeholder"
+author: "המוקד"
+draft: true
+---
+
+This file must always exist, even if it's the only file in this folder.
+
+`src/lib/blog.ts` dynamic-imports `.mdx` files with a template literal
+(`import(\`@/content/blog/${slug}.mdx\`)`) — the documented Next.js pattern
+for this exact use case. Turbopack/webpack statically resolve that pattern
+against the directory's contents *at compile time*, before any runtime code
+runs. If the directory is completely empty, that resolution fails and the
+whole `/blog` route 500s — even though the runtime logic would have
+correctly returned an empty list. `draft: true` keeps this file permanently
+excluded from `getAllBlogPosts()`/`generateStaticParams()`, so it never
+appears on the site, but its mere presence keeps the dynamic-import context
+non-empty. Never delete it, even if it's the last file left in the folder.

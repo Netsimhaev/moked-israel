@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { Header } from "@/components/Header";
+import { MinimalHeader } from "@/components/MinimalHeader";
 import { Footer } from "@/components/Footer";
 import { getCheckoutItem } from "@/lib/checkout";
 
@@ -19,7 +19,7 @@ export default async function CheckoutSuccessPage({
 
   return (
     <>
-      <Header />
+      <MinimalHeader />
       <main>
         <section className="py-16 sm:py-20">
           <div className="mx-auto max-w-[560px] px-6 text-center sm:px-8">

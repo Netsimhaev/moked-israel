@@ -48,6 +48,7 @@ export type LandingPageProduct = {
   standardNote?: string; // gun safes only — verbatim compliance text, never paraphrase
   disclaimer?: string; // course only
   faq: { question: string; answer: string }[];
+  demoVideo?: { src: string; poster: string; title: string }; // real on-site demo, own section — model-e only today
 };
 
 export const categoryGradient: Record<LandingPageCategory, string> = {
@@ -140,6 +141,7 @@ export function getLandingPageProduct(slug: string): LandingPageProduct | undefi
       specs: gunSafe.specs,
       standardNote: gunSafe.standardNote,
       faq: gunSafe.faq,
+      demoVideo: gunSafe.demoVideo,
     };
   }
 

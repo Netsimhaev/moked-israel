@@ -9,6 +9,11 @@ type ChatMessage = { role: "user" | "assistant"; content: string };
 // rather than introducing SSE/useChat plumbing for the first time in this
 // codebase. Conversation state lives only in this component — nothing is
 // persisted server-side (see app/api/chat/route.ts).
+//
+// Rendered as a fixed floating trigger (bottom-left, RTL convention) so it
+// tracks the viewport through scroll instead of living inline in page
+// content — the user asked for a chat entry point that never disappears as
+// they scroll a long landing page.
 export function ProductChatWidget({
   slug,
   productName,
@@ -47,29 +52,32 @@ export function ProductChatWidget({
   }
 
   return (
-    <div className="rounded-[var(--radius-l)] border border-[var(--color-line)] bg-white p-6">
+    <>
       <button
         type="button"
         onClick={() => setOpen((v) => !v)}
-        className="flex w-full items-center justify-between gap-3 text-start"
         aria-expanded={open}
+        aria-label={open ? "סגרו את הצ׳אט" : `שאלו שאלה על ${productName}`}
+        className="fixed bottom-6 left-6 z-40 flex max-w-[calc(100vw-3rem)] items-center gap-2 rounded-full bg-navy px-5 py-3.5 font-num text-[0.88rem] font-semibold text-cream shadow-[var(--shadow-card)] transition hover:brightness-110"
       >
-        <span>
-          <span className="block font-num text-[1.05rem] font-semibold text-navy-deep">
-            💬 יש לכם שאלה על {productName}?
-          </span>
-          <span className="mt-1 block text-[0.85rem] text-gray">
-            שאלו את הצ׳אט שלנו — עונה על סמך המידע המדויק של המוצר הזה
-          </span>
+        <span aria-hidden className="flex-none text-[1.1rem]">
+          {open ? "✕" : "💬"}
         </span>
-        <span aria-hidden className="flex-none text-gray">
-          {open ? "−" : "+"}
-        </span>
+        <span>{open ? "סגירת הצ׳אט" : "אשמח לענות על כל שאלה"}</span>
       </button>
 
       {open && (
-        <div className="mt-5">
-          <div className="flex max-h-[360px] flex-col gap-3 overflow-y-auto">
+        <div className="fixed bottom-28 left-6 z-40 flex max-h-[min(520px,calc(100vh-9rem))] w-[min(360px,calc(100vw-3rem))] flex-col rounded-[var(--radius-l)] border border-[var(--color-line)] bg-white shadow-[var(--shadow-card)]">
+          <div className="flex-none border-b border-[var(--color-line)] p-4">
+            <p className="font-num text-[0.95rem] font-semibold text-navy-deep">
+              💬 יש לכם שאלה על {productName}?
+            </p>
+            <p className="mt-1 text-[0.8rem] text-gray">
+              שאלו את הצ׳אט שלנו — עונה על סמך המידע המדויק של המוצר הזה
+            </p>
+          </div>
+
+          <div className="flex flex-1 flex-col gap-3 overflow-y-auto p-4">
             {messages.length === 0 && (
               <p className="text-[0.85rem] text-gray">
                 לדוגמה: &quot;מה קורה אם נגמרת הסוללה?&quot; או &quot;מה כולל
@@ -96,12 +104,16 @@ export function ProductChatWidget({
           </div>
 
           {status === "error" && (
-            <p className="mt-3 text-[0.82rem] text-brick">
-              משהו השתבש. אפשר לנסות שוב, או להשאיר פרטים למטה ונחזור אליכם.
+            <p className="flex-none px-4 text-[0.82rem] text-brick">
+              משהו השתבש. אפשר לנסות שוב, או להשאיר פרטים בטופס שבעמוד ונחזור
+              אליכם.
             </p>
           )}
 
-          <form onSubmit={handleSubmit} className="mt-4 flex gap-2">
+          <form
+            onSubmit={handleSubmit}
+            className="flex flex-none gap-2 border-t border-[var(--color-line)] p-3"
+          >
             <input
               type="text"
               value={input}
@@ -118,12 +130,12 @@ export function ProductChatWidget({
               שלחו
             </button>
           </form>
-          <p className="mt-2.5 text-[0.75rem] text-gray">
+          <p className="flex-none px-4 pb-3 text-[0.72rem] text-gray">
             הבוט עונה על בסיס מידע המוצר שלנו. לשאלות מחייבות או מורכבות —
-            פנו לנציג אנושי בטופס למטה או בוואטסאפ.
+            פנו לנציג אנושי בטופס שבעמוד או בוואטסאפ.
           </p>
         </div>
       )}
-    </div>
+    </>
   );
 }
