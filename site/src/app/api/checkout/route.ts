@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { createLowProfileSession } from "@/lib/cardcom";
 import { getCheckoutItem } from "@/lib/checkout";
-import { getCrossSellSlug, CROSS_SELL_DISCOUNT_PERCENT } from "@/lib/crossSell";
+import { isValidBundlePair, CROSS_SELL_DISCOUNT_PERCENT } from "@/lib/crossSell";
 import { createRateLimiter, getClientIp } from "@/lib/rateLimit";
 import { pendingOrders } from "@/lib/orderStore";
 
@@ -87,10 +87,12 @@ export async function POST(request: Request) {
 
   let crossSellSlug: string | undefined;
   if (typeof raw.crossSellSlug === "string" && raw.crossSellSlug) {
-    // Reject a client-supplied cross-sell pairing that doesn't match our own
-    // mapping — prevents a tampered request from adding an arbitrary product
-    // at the 5% discount price.
-    if (getCrossSellSlug(slug) !== raw.crossSellSlug) {
+    // Reject a client-supplied bundle pairing that isn't two real, distinct
+    // catalog products — prevents a tampered request from adding an
+    // arbitrary/fake product at the 5% discount price. Any real pair is
+    // valid today (not just the fixed organic default from crossSellMap) —
+    // see lib/crossSell.ts header comment for why this was generalized.
+    if (!isValidBundlePair(slug, raw.crossSellSlug)) {
       return NextResponse.json(
         { error: "invalid cross-sell pairing" },
         { status: 400 },
@@ -104,6 +106,16 @@ export async function POST(request: Request) {
     amount += Math.round(
       crossSellItem.price * (1 - CROSS_SELL_DISCOUNT_PERCENT / 100),
     );
+    // The addon can now be any catalog product (2026-07-17 bundle
+    // generalization), not just ALFA (a lock, no shipping) — if it has its
+    // own shippingPrice, charge it too, or a safe added as a bundle addon
+    // ships for free by mistake. No installation toggle exists for the
+    // addon (single order-bump checkbox, not a full second item config) —
+    // always treated as shipped, matching CheckoutFlow.tsx's client-side
+    // total (must stay in sync — this is the server-side source of truth).
+    if (crossSellItem.shippingPrice) {
+      amount += crossSellItem.shippingPrice;
+    }
   }
 
   const orderId = crypto.randomUUID();

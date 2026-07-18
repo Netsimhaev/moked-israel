@@ -7,19 +7,27 @@ import Link from "next/link";
 export function BuyNowButton({
   slug,
   selectedColorId,
+  bundleSlug,
   label = "קנו עכשיו — תשלום מאובטח",
   variant = "primary",
   microcopy = "תשלום מאובטח · משלוח והתקנה מתואמים · אחריות יבואן רשמי",
 }: {
   slug: string;
   selectedColorId?: string;
+  // Preselects a bundle addon on the checkout page (any valid product pair,
+  // not just the fixed organic default — see lib/crossSell.ts). Not used by
+  // any page today; added so the AI sales agent's checkout links and a
+  // future in-page bundle CTA share the same query param convention.
+  bundleSlug?: string;
   label?: string;
   variant?: "primary" | "hero";
   microcopy?: string;
 }) {
-  const href = selectedColorId
-    ? `/checkout/${slug}?color=${encodeURIComponent(selectedColorId)}`
-    : `/checkout/${slug}`;
+  const params = new URLSearchParams();
+  if (selectedColorId) params.set("color", selectedColorId);
+  if (bundleSlug) params.set("addon", bundleSlug);
+  const query = params.toString();
+  const href = query ? `/checkout/${slug}?${query}` : `/checkout/${slug}`;
 
   return (
     <div className={variant === "hero" ? "mb-5" : "mb-3"}>

@@ -201,3 +201,27 @@ export const landingPageProducts: LandingPageProduct[] = [
   ...gunSafeProducts.map((p) => getLandingPageProduct(p.slug)!),
   ...courseProducts.map((p) => getLandingPageProduct(p.slug)!),
 ];
+
+export type CatalogSummaryItem = {
+  slug: string;
+  name: string;
+  category: LandingPageCategory;
+  tagline: string;
+  ourPrice: number;
+};
+
+// Deliberately thin — no specs/faq/standardNote/disclaimer. Safe to inject
+// into every chat system prompt for cross-product comparison without
+// leaking gun-safe compliance text or a full spec sheet for a product the
+// visitor isn't even looking at. Full detail on a specific other product is
+// fetched on demand via the getProductDetails tool (lib/claude.ts), which
+// goes through getLandingPageProduct itself — never invented by the model.
+export function getCatalogSummary(): CatalogSummaryItem[] {
+  return landingPageProducts.map((p) => ({
+    slug: p.slug,
+    name: p.name,
+    category: p.category,
+    tagline: p.tagline,
+    ourPrice: p.pricing.ourPrice,
+  }));
+}

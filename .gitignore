@@ -7,3 +7,6 @@ site/.env.local
 /*.png
 /*.jpg
 /*.jpeg
+
+.vercel
+.env*

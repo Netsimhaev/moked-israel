@@ -78,7 +78,16 @@ export function CheckoutFlow({
   if (installationSelected && item.installationPrice) {
     total += item.installationPrice;
   }
-  if (includeCrossSell && crossSellItem) total += crossSellPrice;
+  if (includeCrossSell && crossSellItem) {
+    total += crossSellPrice;
+    // The bundle addon can now be any catalog product (2026-07-17), not just
+    // ALFA (a lock with no shipping cost) — if it has its own shippingPrice,
+    // it must be charged too, or a safe added as a bundle addon ships free
+    // by accident. The addon has no installation toggle of its own (single
+    // order-bump checkbox, not a full second item config) — always treated
+    // as shipped, never installed, regardless of the base item's fulfillment.
+    if (crossSellItem.shippingPrice) total += crossSellItem.shippingPrice;
+  }
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -392,6 +401,14 @@ export function CheckoutFlow({
                   </dd>
                 </div>
               )}
+              {includeCrossSell && crossSellItem && crossSellItem.shippingPrice ? (
+                <div className="flex items-baseline justify-between">
+                  <dt className="text-gray">משלוח ({crossSellItem.name})</dt>
+                  <dd className="num text-navy-deep">
+                    ₪{formatPrice(crossSellItem.shippingPrice)}
+                  </dd>
+                </div>
+              ) : null}
             </dl>
             <div className="mt-4 flex items-baseline justify-between border-t border-[var(--color-line)] pt-4">
               <dt className="font-num text-[0.95rem] font-semibold text-navy-deep">

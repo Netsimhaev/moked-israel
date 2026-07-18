@@ -79,5 +79,9 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: result.error }, { status: 502 });
   }
 
-  return NextResponse.json({ reply: result.reply });
+  return NextResponse.json({
+    reply: result.reply,
+    media: result.media,
+    checkoutLink: result.checkoutLink,
+  });
 }
